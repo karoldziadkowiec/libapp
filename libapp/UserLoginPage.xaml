@@ -14,6 +14,56 @@
         <Button Content="Log in" HorizontalAlignment="Left" Height="61" Margin="533,485,0,0" VerticalAlignment="Top" Width="181" Background="White" FontFamily="Comic Sans MS" FontSize="32" Foreground="#FF641717" Click="Button_Click_1"/>
         <Label Content="Check the status of your rentals" HorizontalAlignment="Left" Margin="300,218,0,0" VerticalAlignment="Top" FontFamily="Comic Sans MS" FontSize="32" Width="520"/>
         <Button Content="Close" HorizontalAlignment="Left" Height="61" Margin="849,537,0,0" VerticalAlignment="Top" Width="181" Background="#FF641717" FontFamily="Comic Sans MS" FontSize="32" Foreground="White" Click="Button_Click"/>
+        <Rectangle HorizontalAlignment="Left" Height="444" Margin="89,-44,0,0" Stroke="#FF641717" VerticalAlignment="Top" Width="15" Fill="#FF641717" RenderTransformOrigin="0.5,0.5">
+            <Rectangle.RenderTransform>
+                <TransformGroup>
+                    <ScaleTransform/>
+                    <SkewTransform/>
+                    <RotateTransform Angle="32.465"/>
+                    <TranslateTransform/>
+                </TransformGroup>
+            </Rectangle.RenderTransform>
+        </Rectangle>
+        <Rectangle HorizontalAlignment="Left" Height="585" Margin="122,-60,0,0" Stroke="#FF641717" VerticalAlignment="Top" Width="20" Fill="#FF641717" RenderTransformOrigin="0.5,0.5">
+            <Rectangle.RenderTransform>
+                <TransformGroup>
+                    <ScaleTransform/>
+                    <SkewTransform/>
+                    <RotateTransform Angle="32.465"/>
+                    <TranslateTransform/>
+                </TransformGroup>
+            </Rectangle.RenderTransform>
+        </Rectangle>
+        <Rectangle HorizontalAlignment="Left" Height="337" Margin="67,-36,0,0" Stroke="#FF641717" VerticalAlignment="Top" Width="10" Fill="#FF641717" RenderTransformOrigin="0.5,0.5">
+            <Rectangle.RenderTransform>
+                <TransformGroup>
+                    <ScaleTransform/>
+                    <SkewTransform/>
+                    <RotateTransform Angle="32.465"/>
+                    <TranslateTransform/>
+                </TransformGroup>
+            </Rectangle.RenderTransform>
+        </Rectangle>
+        <Rectangle HorizontalAlignment="Left" Height="259" Margin="54,-33,0,0" Stroke="#FF641717" VerticalAlignment="Top" Width="5" Fill="#FF641717" RenderTransformOrigin="0.5,0.5">
+            <Rectangle.RenderTransform>
+                <TransformGroup>
+                    <ScaleTransform/>
+                    <SkewTransform/>
+                    <RotateTransform Angle="32.465"/>
+                    <TranslateTransform/>
+                </TransformGroup>
+            </Rectangle.RenderTransform>
+        </Rectangle>
+        <Rectangle HorizontalAlignment="Left" Height="729" Margin="155,-70,0,0" Stroke="#FF641717" VerticalAlignment="Top" Width="25" Fill="#FF641717" RenderTransformOrigin="0.5,0.5">
+            <Rectangle.RenderTransform>
+                <TransformGroup>
+                    <ScaleTransform/>
+                    <SkewTransform/>
+                    <RotateTransform Angle="32.465"/>
+                    <TranslateTransform/>
+                </TransformGroup>
+            </Rectangle.RenderTransform>
+        </Rectangle>
 
     </Grid>
 </Window>
