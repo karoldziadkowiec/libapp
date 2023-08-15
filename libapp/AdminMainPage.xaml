@@ -21,8 +21,8 @@
         <Label Content="Welcome to" HorizontalAlignment="Left" Margin="553,140,0,0" VerticalAlignment="Top" Height="67" Width="285" FontFamily="Comic Sans MS" FontSize="32" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" FontWeight="Bold"/>
         <Label Content="libapp" HorizontalAlignment="Left" Margin="576,188,0,0" VerticalAlignment="Top" Height="167" Width="357" FontFamily="Harlow Solid Italic" FontSize="90" RenderTransformOrigin="0.427,0.516" Foreground="#FF641717" FontWeight="Bold"/>
         <Image HorizontalAlignment="Left" Height="278" Margin="556,288,0,0" VerticalAlignment="Top" Width="322" Source="/main.png"/>
-        <Label Content="Today is:" HorizontalAlignment="Left" Margin="437,566,0,0" VerticalAlignment="Top" Height="50" Width="155" Foreground="Black" FontFamily="Comic Sans MS" FontSize="32" FontWeight="Bold"/>
-        <Label x:Name="date_label" Content="day" HorizontalAlignment="Left" Margin="597,566,0,0" VerticalAlignment="Top" Height="50" Width="473" Foreground="#FF871919" FontFamily="Comic Sans MS" FontSize="32" FontWeight="Bold"/>
+        <Label Content="Today is:" HorizontalAlignment="Left" Margin="437,566,0,0" VerticalAlignment="Top" Height="56" Width="155" Foreground="Black" FontFamily="Comic Sans MS" FontSize="32" FontWeight="Bold"/>
+        <Label x:Name="date_label" Content="day" HorizontalAlignment="Left" Margin="597,566,0,0" VerticalAlignment="Top" Height="56" Width="473" Foreground="#FF871919" FontFamily="Comic Sans MS" FontSize="32" FontWeight="Bold"/>
 
     </Grid>
 </Window>

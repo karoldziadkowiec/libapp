@@ -19,5 +19,13 @@
         <Button Content="Readers" HorizontalAlignment="Left" Margin="560,0,0,0" VerticalAlignment="Top" Height="125" Width="271" Foreground="White" Background="Black" BorderBrush="White" FontFamily="Comic Sans MS" FontSize="32" Click="Button_Click_1"/>
         <Button Content="Add reader" HorizontalAlignment="Left" Margin="290,0,0,0" VerticalAlignment="Top" Height="125" Width="270" Foreground="White" Background="Black" BorderBrush="White" FontFamily="Comic Sans MS" FontSize="32" Click="Button_Click_3"/>
         <Rectangle HorizontalAlignment="Left" Height="24" Margin="560,101,0,0" Stroke="Black" VerticalAlignment="Top" Width="271" Fill="White"/>
+        <Rectangle HorizontalAlignment="Left" Height="61" Margin="352,146,0,0" Stroke="#FF641717" VerticalAlignment="Top" Width="14" Fill="#FF450000"/>
+        <DataGrid x:Name="readers_table" HorizontalAlignment="Left" Height="277" Margin="345,228,0,0" VerticalAlignment="Top" Width="703" d:ItemsSource="{d:SampleData ItemCount=5}" SelectionChanged="readers_table_SelectionChanged" FontFamily="Comic Sans MS" FontSize="14" HeadersVisibility="Column"/>
+        <Button Content="Close" HorizontalAlignment="Left" Margin="894,575,0,0" VerticalAlignment="Top" Height="40" Width="154" Background="#FF641717" Foreground="White" BorderBrush="#FF641717" FontFamily="Comic Sans MS" FontSize="24" Click="Button_Click_11" RenderTransformOrigin="0.222,1.02"/>
+        <Label Content="Search for a reader by PESEL number:" HorizontalAlignment="Left" Margin="345,522,0,0" VerticalAlignment="Top" Width="587" Height="48" Foreground="#FF641717" FontFamily="Comic Sans MS" FontSize="22" VerticalContentAlignment="Center"/>
+        <Rectangle HorizontalAlignment="Center" Height="3" Margin="0,567,0,0" Stroke="#FF641717" VerticalAlignment="Top" Width="398" Fill="#FF641717"/>
+        <TextBox x:Name="pesel_textbox" HorizontalAlignment="Left" Margin="351,575,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="182" Height="40" FontFamily="Comic Sans MS" FontSize="25" VerticalContentAlignment="Center" BorderBrush="#FF641717" TabIndex="30"/>
+        <Button Content="Search" HorizontalAlignment="Left" Margin="550,575,0,0" VerticalAlignment="Top" Height="40" Width="199" BorderBrush="#FF641717" Foreground="White" Background="#FF641717" FontFamily="Comic Sans MS" FontSize="24" Click="Button_Click_9"/>
+        <Label Content="Readers" HorizontalAlignment="Left" Margin="371,146,0,0" VerticalAlignment="Top" Width="227" Height="61" Foreground="#FF641717" FontFamily="Comic Sans MS" FontSize="32" VerticalContentAlignment="Center" FontWeight="Bold"/>
     </Grid>
 </Window>

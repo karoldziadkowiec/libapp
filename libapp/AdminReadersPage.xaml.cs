@@ -1,5 +1,7 @@
-﻿using System;
+﻿using MySql.Data.MySqlClient;
+using System;
 using System.Collections.Generic;
+using System.Data;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -24,8 +26,32 @@ namespace libapp
         {
             InitializeComponent();
             admin = administrator;
+            LoadData();
         }
 
+        private void LoadData()
+        {
+            string connectionString = "server=localhost;database=libapp;username=root;password=;";
+
+            using (MySqlConnection connection = new MySqlConnection(connectionString))
+            {
+                try
+                {
+                    connection.Open();
+                    MySqlCommand cmdDataBase = new MySqlCommand("SELECT surname AS 'Surname', name AS 'Name', pesel AS 'PESEL number', birthday AS 'Birthday', phone AS 'Phone number', email AS 'E-mail', address AS 'Address' FROM readers ORDER BY surname ASC", connection);
+
+                    MySqlDataAdapter adapter = new MySqlDataAdapter(cmdDataBase);
+                    DataTable dt = new DataTable();
+                    adapter.Fill(dt);
+
+                    readers_table.ItemsSource = dt.DefaultView;
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show("Error: " + ex.Message);
+                }
+            }
+        }
         private void Button_Click_2(object sender, RoutedEventArgs e)
         {
             AdminMainPage adminmainpage = new AdminMainPage(admin);
@@ -87,5 +113,37 @@ namespace libapp
             this.Hide();
         }
 
+        private void readers_table_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
+            if (readers_table.SelectedItem != null)
+            {
+                DataRowView selectedRow = (DataRowView)readers_table.SelectedItem;
+                string selectedValue = selectedRow["PESEL number"].ToString();
+                pesel_textbox.Text = selectedValue;
+            }
+        }
+
+        private void Button_Click_11(object sender, RoutedEventArgs e)
+        {
+            AdminMainPage adminmainpage = new AdminMainPage(admin);
+            adminmainpage.Show();
+            this.Hide();
+        }
+
+        private void Button_Click_9(object sender, RoutedEventArgs e)
+        {
+            string selectedPesel = pesel_textbox.Text;
+
+            if (!string.IsNullOrEmpty(selectedPesel))
+            {
+                AdminReaderDataPage adminreaderdatapage = new AdminReaderDataPage(admin, selectedPesel);
+                adminreaderdatapage.Show();
+                this.Hide();
+            }
+            else
+            {
+                MessageBox.Show("Please, select a valid Pesel before proceeding.");
+            }
+        }
     }
 }

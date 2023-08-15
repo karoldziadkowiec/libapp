@@ -1,0 +1,50 @@
+﻿<Window x:Class="libapp.AdminReaderDataPage"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:libapp"
+        mc:Ignorable="d"
+        Title="libapp" Height="700" Width="1100" Icon="/icon.png" WindowStartupLocation="CenterScreen" ResizeMode="CanMinimize" Background="White">
+    <Grid>
+        <Rectangle HorizontalAlignment="Left" Height="684" Stroke="#FF641717" VerticalAlignment="Center" Width="290" Fill="#FF871919"/>
+        <Button Content="libapp" HorizontalAlignment="Left" VerticalAlignment="Top" Height="125" Width="290" Background="#FF450000" BorderBrush="White" FontFamily="Harlow Solid Italic" FontSize="65" FontWeight="Bold" Foreground="White" HorizontalContentAlignment="Center" Click="Button_Click_2"/>
+        <Button Content="Borrow book" HorizontalAlignment="Left" Margin="0,125,0,0" VerticalAlignment="Top" Height="82" Width="290" Background="#FF641717" FontFamily="Comic Sans MS" FontSize="32" BorderBrush="White" Foreground="White" Click="Button_Click_4"/>
+        <Button Content="Book list" HorizontalAlignment="Left" Margin="0,207,0,0" VerticalAlignment="Top" Height="82" Width="290" Background="#FF641717" FontFamily="Comic Sans MS" FontSize="32" BorderBrush="White" Foreground="White" Click="Button_Click_5"/>
+        <Button Content="Return deadlines" HorizontalAlignment="Left" Margin="0,288,0,0" VerticalAlignment="Top" Height="82" Width="290" Background="#FF641717" FontFamily="Comic Sans MS" FontSize="32" BorderBrush="White" Foreground="White" Click="Button_Click_6"/>
+        <Button Content="Add book" HorizontalAlignment="Left" Margin="0,370,0,0" VerticalAlignment="Top" Height="82" Width="290" Background="#FF641717" FontFamily="Comic Sans MS" FontSize="32" BorderBrush="White" Foreground="White" Click="Button_Click_7"/>
+        <Button Content="Log out" HorizontalAlignment="Left" Margin="0,581,0,0" VerticalAlignment="Top" Height="82" Width="290" Background="#FF641717" FontFamily="Comic Sans MS" FontSize="32" BorderBrush="White" Foreground="White" Click="Button_Click_8"/>
+        <Rectangle HorizontalAlignment="Left" Height="125" Margin="290,0,0,0" Stroke="Black" VerticalAlignment="Top" Width="810" Fill="Black"/>
+        <Button Content="My profile" HorizontalAlignment="Left" Margin="831,0,0,0" VerticalAlignment="Top" Height="125" Width="269" Foreground="White" Background="#FF412222" BorderBrush="White" FontFamily="Comic Sans MS" FontSize="32" HorizontalContentAlignment="Center" Click="Button_Click"/>
+        <Button Content="Readers" HorizontalAlignment="Left" Margin="560,0,0,0" VerticalAlignment="Top" Height="125" Width="271" Foreground="White" Background="Black" BorderBrush="White" FontFamily="Comic Sans MS" FontSize="32" Click="Button_Click_1"/>
+        <Button Content="Add reader" HorizontalAlignment="Left" Margin="290,0,0,0" VerticalAlignment="Top" Height="125" Width="270" Foreground="White" Background="Black" BorderBrush="White" FontFamily="Comic Sans MS" FontSize="32" Click="Button_Click_3"/>
+        <Rectangle HorizontalAlignment="Left" Height="24" Margin="560,101,0,0" Stroke="Black" VerticalAlignment="Top" Width="271" Fill="White"/>
+        <Rectangle HorizontalAlignment="Left" Height="61" Margin="352,146,0,0" Stroke="#FF641717" VerticalAlignment="Top" Width="14" Fill="#FF450000"/>
+        <DataGrid x:Name="readers_table" HorizontalAlignment="Left" Height="200" Margin="346,432,0,0" VerticalAlignment="Top" Width="510" d:ItemsSource="{d:SampleData ItemCount=5}" SelectionChanged="readers_table_SelectionChanged" FontFamily="Comic Sans MS" FontSize="14" HeadersVisibility="Column"/>
+        <Button Content="Close" HorizontalAlignment="Left" Margin="885,592,0,0" VerticalAlignment="Top" Height="40" Width="175" Background="#FF641717" Foreground="White" BorderBrush="#FF641717" FontFamily="Comic Sans MS" FontSize="24" Click="Button_Click_11" RenderTransformOrigin="0.222,1.02"/>
+        <Rectangle HorizontalAlignment="Left" Height="3" Margin="338,268,0,0" Stroke="#FF641717" VerticalAlignment="Top" Width="150" Fill="#FF641717"/>
+        <Label x:Name="name_label" Content="name" HorizontalAlignment="Left" Margin="338,271,0,0" VerticalAlignment="Top" Height="58" Width="181" Foreground="Black" FontFamily="Comic Sans MS" FontSize="24"/>
+        <Rectangle HorizontalAlignment="Left" Height="3" Margin="519,268,0,0" Stroke="#FF641717" VerticalAlignment="Top" Width="150" Fill="#FF641717"/>
+        <Label x:Name="surname_label" Content="surname" HorizontalAlignment="Left" Margin="519,271,0,0" VerticalAlignment="Top" Height="58" Width="179" Foreground="Black" FontFamily="Comic Sans MS" FontSize="24"/>
+        <Rectangle HorizontalAlignment="Left" Height="3" Margin="703,268,0,0" Stroke="#FF641717" VerticalAlignment="Top" Width="175" Fill="#FF641717"/>
+        <Label x:Name="pesel_label" Content="pesel" HorizontalAlignment="Left" Margin="703,271,0,0" VerticalAlignment="Top" Height="58" Width="202" Foreground="Black" FontFamily="Comic Sans MS" FontSize="24"/>
+        <Rectangle HorizontalAlignment="Left" Height="3" Margin="910,268,0,0" Stroke="#FF641717" VerticalAlignment="Top" Width="166" Fill="#FF641717"/>
+        <Label x:Name="phone_label" Content="phone" HorizontalAlignment="Left" Margin="910,271,0,0" VerticalAlignment="Top" Height="58" Width="180" Foreground="Black" FontFamily="Comic Sans MS" FontSize="24"/>
+        <Rectangle HorizontalAlignment="Left" Height="3" Margin="338,366,0,0" Stroke="#FF641717" VerticalAlignment="Top" Width="256" Fill="#FF641717"/>
+        <Label x:Name="email_label" Content="e-mail" HorizontalAlignment="Left" Margin="338,369,0,0" VerticalAlignment="Top" Height="58" Width="267" Foreground="Black" FontFamily="Comic Sans MS" FontSize="24"/>
+        <Rectangle HorizontalAlignment="Left" Height="3" Margin="758,365,0,0" Stroke="#FF641717" VerticalAlignment="Top" Width="302" Fill="#FF641717"/>
+        <Label x:Name="address_label" Content="address" HorizontalAlignment="Left" Margin="762,369,0,0" VerticalAlignment="Top" Height="58" Width="298" Foreground="Black" FontFamily="Comic Sans MS" FontSize="24"/>
+        <Rectangle HorizontalAlignment="Left" Height="3" Margin="614,365,0,0" Stroke="#FF641717" VerticalAlignment="Top" Width="125" Fill="#FF641717"/>
+        <Label x:Name="birthday_label" Content="birthday" HorizontalAlignment="Left" Margin="614,369,0,0" VerticalAlignment="Top" Height="42" Width="179" Foreground="Black" FontFamily="Comic Sans MS" FontSize="24"/>
+        <Button Content="Delete profile" HorizontalAlignment="Left" Margin="885,504,0,0" VerticalAlignment="Top" Height="56" Width="175" Background="#FF641717" Foreground="White" BorderBrush="#FF641717" FontFamily="Comic Sans MS" FontSize="24" Click="Button_Click_10"/>
+        <Button Content="Edit profile" HorizontalAlignment="Left" Margin="885,432,0,0" VerticalAlignment="Top" Height="56" Width="175" Background="#FF641717" Foreground="White" BorderBrush="#FF641717" FontFamily="Comic Sans MS" FontSize="24" Click="Button_Click_9"/>
+        <Label Content="Name" HorizontalAlignment="Left" Margin="338,222,0,0" VerticalAlignment="Top" Height="52" Width="150" FontFamily="Comic Sans MS" FontSize="24" Foreground="#FF641717"/>
+        <Label Content="Surname" HorizontalAlignment="Left" Margin="519,222,0,0" VerticalAlignment="Top" Height="51" Width="150" FontFamily="Comic Sans MS" FontSize="24" Foreground="#FF641717"/>
+        <Label Content="PESEL number" HorizontalAlignment="Left" Margin="706,222,0,0" VerticalAlignment="Top" Height="51" Width="172" FontFamily="Comic Sans MS" FontSize="24" Foreground="#FF641717"/>
+        <Label Content="Phone number" HorizontalAlignment="Left" Margin="910,222,0,0" VerticalAlignment="Top" Height="51" Width="180" FontFamily="Comic Sans MS" FontSize="24" Foreground="#FF641717"/>
+        <Label Content="E-mail" HorizontalAlignment="Left" Margin="338,319,0,0" VerticalAlignment="Top" Height="51" Width="256" FontFamily="Comic Sans MS" FontSize="24" Foreground="#FF641717"/>
+        <Label Content="Birthday" HorizontalAlignment="Left" Margin="614,319,0,0" VerticalAlignment="Top" Height="51" Width="125" FontFamily="Comic Sans MS" FontSize="24" Foreground="#FF641717"/>
+        <Label Content="Address" HorizontalAlignment="Left" Margin="762,319,0,0" VerticalAlignment="Top" Height="51" Width="298" FontFamily="Comic Sans MS" FontSize="24" Foreground="#FF641717"/>
+        <Label Content="Readers &gt;&gt; Reader data" HorizontalAlignment="Left" Margin="371,146,0,0" VerticalAlignment="Top" Width="460" Height="61" Foreground="#FF641717" FontFamily="Comic Sans MS" FontSize="32" VerticalContentAlignment="Center" FontWeight="Bold"/>
+    </Grid>
+</Window>

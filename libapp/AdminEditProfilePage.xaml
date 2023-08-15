@@ -20,7 +20,6 @@
         <Button Content="Add reader" HorizontalAlignment="Left" Margin="290,0,0,0" VerticalAlignment="Top" Height="125" Width="270" Foreground="White" Background="Black" BorderBrush="White" FontFamily="Comic Sans MS" FontSize="32" Click="Button_Click_3"/>
         <Rectangle HorizontalAlignment="Left" Height="24" Margin="831,101,0,0" Stroke="Black" VerticalAlignment="Top" Width="269" Fill="White"/>
         <Rectangle HorizontalAlignment="Left" Height="61" Margin="352,146,0,0" Stroke="#FF641717" VerticalAlignment="Top" Width="14" Fill="#FF450000"/>
-        <TextBox HorizontalAlignment="Left" Margin="371,146,0,0" TextWrapping="Wrap" Text="My profile &gt;&gt; Edit profile" VerticalAlignment="Top" Width="433" Height="61" Foreground="#FF450000" FontFamily="Comic Sans MS" FontSize="32" FontWeight="Bold" BorderBrush="White" VerticalContentAlignment="Center"/>
         <Rectangle HorizontalAlignment="Left" Height="3" Margin="425,255,0,0" Stroke="#FF641717" VerticalAlignment="Top" Width="276" Fill="#FF641717"/>
         <Rectangle HorizontalAlignment="Left" Height="3" Margin="725,255,0,0" Stroke="#FF641717" VerticalAlignment="Top" Width="276" Fill="#FF641717"/>
         <Rectangle HorizontalAlignment="Left" Height="3" Margin="425,363,0,0" Stroke="#FF641717" VerticalAlignment="Top" Width="276" Fill="#FF641717"/>
@@ -41,5 +40,6 @@
         <Label Content="Password" HorizontalAlignment="Left" Margin="425,413,0,0" VerticalAlignment="Top" Width="276" Height="54" Foreground="#FF641717" FontFamily="Comic Sans MS" FontSize="32" VerticalContentAlignment="Center"/>
         <Label Content="Confirm password" HorizontalAlignment="Left" Margin="725,413,0,0" VerticalAlignment="Top" Width="276" Height="54" Foreground="#FF641717" FontFamily="Comic Sans MS" FontSize="32" VerticalContentAlignment="Center"/>
         <Label x:Name="pesel_label" Content="PESEL number" HorizontalAlignment="Left" Margin="725,371,0,0" VerticalAlignment="Top" Width="276" Height="54" Foreground="Black" FontFamily="Comic Sans MS" FontSize="25" VerticalContentAlignment="Center"/>
+        <Label Content="My profile &gt;&gt; Edit profile" HorizontalAlignment="Left" Margin="371,146,0,0" VerticalAlignment="Top" Width="460" Height="61" Foreground="#FF641717" FontFamily="Comic Sans MS" FontSize="32" VerticalContentAlignment="Center" FontWeight="Bold"/>
     </Grid>
 </Window>

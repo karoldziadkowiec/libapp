@@ -19,5 +19,7 @@
         <Button Content="Readers" HorizontalAlignment="Left" Margin="560,0,0,0" VerticalAlignment="Top" Height="125" Width="271" Foreground="White" Background="Black" BorderBrush="White" FontFamily="Comic Sans MS" FontSize="32" Click="Button_Click_1"/>
         <Button Content="Add reader" HorizontalAlignment="Left" Margin="290,0,0,0" VerticalAlignment="Top" Height="125" Width="270" Foreground="White" Background="Black" BorderBrush="White" FontFamily="Comic Sans MS" FontSize="32" Click="Button_Click_3"/>
         <Rectangle HorizontalAlignment="Left" Height="81" Margin="0,289,0,0" Stroke="Black" VerticalAlignment="Top" Width="37" Fill="White"/>
+        <Rectangle HorizontalAlignment="Left" Height="61" Margin="352,146,0,0" Stroke="#FF641717" VerticalAlignment="Top" Width="14" Fill="#FF450000"/>
+        <Label Content="Return deadlines" HorizontalAlignment="Left" Margin="371,146,0,0" VerticalAlignment="Top" Width="305" Height="61" Foreground="#FF641717" FontFamily="Comic Sans MS" FontSize="32" VerticalContentAlignment="Center" FontWeight="Bold"/>
     </Grid>
 </Window>

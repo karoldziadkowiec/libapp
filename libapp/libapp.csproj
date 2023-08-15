@@ -132,6 +132,12 @@
     <Compile Include="AdminMyProfilePage.xaml.cs">
       <DependentUpon>AdminMyProfilePage.xaml</DependentUpon>
     </Compile>
+    <Compile Include="AdminReaderDataPage.xaml.cs">
+      <DependentUpon>AdminReaderDataPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="AdminReadersEditProfilePage.xaml.cs">
+      <DependentUpon>AdminReadersEditProfilePage.xaml</DependentUpon>
+    </Compile>
     <Compile Include="AdminReadersPage.xaml.cs">
       <DependentUpon>AdminReadersPage.xaml</DependentUpon>
     </Compile>
@@ -177,6 +183,14 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="AdminMyProfilePage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="AdminReaderDataPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="AdminReadersEditProfilePage.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

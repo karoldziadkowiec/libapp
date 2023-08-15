@@ -8,12 +8,12 @@ namespace libapp
 {
     public class Administrator
     {
-        public int id;
-        public string name;
-        public string surname;
-        public string login;
-        public string password;
-        public string pesel;
+        public int id { get; set; }
+        public string name { get; set; }
+        public string surname { get; set; }
+        public string login { get; set; }
+        public string password { get; set; }
+        public string pesel { get; set; }
         public Administrator(int ID, string NAME, string SURNAME, string LOGIN, string PASSWORD, string PESEL)
         {
             id = ID;
