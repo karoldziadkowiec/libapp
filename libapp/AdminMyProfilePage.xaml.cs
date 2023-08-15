@@ -15,12 +15,12 @@ using System.Windows.Shapes;
 namespace libapp
 {
     /// <summary>
-    /// Logika interakcji dla klasy AdminMainPage.xaml
+    /// Logika interakcji dla klasy AdminMyProfilePage.xaml
     /// </summary>
-    public partial class AdminMainPage : Window
+    public partial class AdminMyProfilePage : Window
     {
         Administrator admin = null;
-        public AdminMainPage(Administrator administrator)
+        public AdminMyProfilePage(Administrator administrator)
         {
             InitializeComponent();
             admin = administrator;
@@ -28,14 +28,14 @@ namespace libapp
 
         private void Button_Click_2(object sender, RoutedEventArgs e)
         {
-            this.InvalidateVisual();
+            AdminMainPage adminmainpage = new AdminMainPage(admin);
+            adminmainpage.Show();
+            this.Hide();
         }
 
         private void Button_Click(object sender, RoutedEventArgs e)
         {
-            AdminMyProfilePage adminmyprofilepage = new AdminMyProfilePage(admin);
-            adminmyprofilepage.Show();
-            this.Hide();
+            this.InvalidateVisual();
         }
 
         private void Button_Click_1(object sender, RoutedEventArgs e)

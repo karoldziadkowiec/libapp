@@ -107,6 +107,18 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
+    <Compile Include="AdminAddBookPage.xaml.cs">
+      <DependentUpon>AdminAddBookPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="AdminAddReaderPage.xaml.cs">
+      <DependentUpon>AdminAddReaderPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="AdminBookListPage.xaml.cs">
+      <DependentUpon>AdminBookListPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="AdminBorrowBookPage.xaml.cs">
+      <DependentUpon>AdminBorrowBookPage.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Administrator.cs" />
     <Compile Include="AdminLoginPage.xaml.cs">
       <DependentUpon>AdminLoginPage.xaml</DependentUpon>
@@ -114,8 +126,17 @@
     <Compile Include="AdminMainPage.xaml.cs">
       <DependentUpon>AdminMainPage.xaml</DependentUpon>
     </Compile>
+    <Compile Include="AdminMyProfilePage.xaml.cs">
+      <DependentUpon>AdminMyProfilePage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="AdminReadersPage.xaml.cs">
+      <DependentUpon>AdminReadersPage.xaml</DependentUpon>
+    </Compile>
     <Compile Include="AdminRegisterPage.xaml.cs">
       <DependentUpon>AdminRegisterPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="AdminReturnDeadlinesPage.xaml.cs">
+      <DependentUpon>AdminReturnDeadlinesPage.xaml</DependentUpon>
     </Compile>
     <Compile Include="User.cs" />
     <Compile Include="UserLoginPage.xaml.cs">
@@ -124,6 +145,22 @@
     <Compile Include="UserMainPage.xaml.cs">
       <DependentUpon>UserMainPage.xaml</DependentUpon>
     </Compile>
+    <Page Include="AdminAddBookPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="AdminAddReaderPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="AdminBookListPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="AdminBorrowBookPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="AdminLoginPage.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
@@ -132,7 +169,19 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
+    <Page Include="AdminMyProfilePage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="AdminReadersPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="AdminRegisterPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="AdminReturnDeadlinesPage.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -195,6 +244,9 @@
   </ItemGroup>
   <ItemGroup>
     <Resource Include="login.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="myprofile.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

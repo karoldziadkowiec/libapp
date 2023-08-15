@@ -15,12 +15,12 @@ using System.Windows.Shapes;
 namespace libapp
 {
     /// <summary>
-    /// Logika interakcji dla klasy AdminMainPage.xaml
+    /// Logika interakcji dla klasy AdminBorrowBookPage.xaml
     /// </summary>
-    public partial class AdminMainPage : Window
+    public partial class AdminBorrowBookPage : Window
     {
         Administrator admin = null;
-        public AdminMainPage(Administrator administrator)
+        public AdminBorrowBookPage(Administrator administrator)
         {
             InitializeComponent();
             admin = administrator;
@@ -28,7 +28,9 @@ namespace libapp
 
         private void Button_Click_2(object sender, RoutedEventArgs e)
         {
-            this.InvalidateVisual();
+            AdminMainPage adminmainpage = new AdminMainPage(admin);
+            adminmainpage.Show();
+            this.Hide();
         }
 
         private void Button_Click(object sender, RoutedEventArgs e)
@@ -54,9 +56,7 @@ namespace libapp
 
         private void Button_Click_4(object sender, RoutedEventArgs e)
         {
-            AdminBorrowBookPage adminborrowbookpage = new AdminBorrowBookPage(admin);
-            adminborrowbookpage.Show();
-            this.Hide();
+            this.InvalidateVisual();
         }
 
         private void Button_Click_5(object sender, RoutedEventArgs e)
@@ -86,5 +86,6 @@ namespace libapp
             adminloginpage.Show();
             this.Hide();
         }
+
     }
 }

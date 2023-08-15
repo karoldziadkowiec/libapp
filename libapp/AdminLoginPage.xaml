@@ -32,13 +32,13 @@
                 </TransformGroup>
             </Rectangle.RenderTransform>
         </Rectangle>
-        <TextBox x:Name="login_textbox" HorizontalAlignment="Left" Height="57" Margin="578,251,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="399" VerticalContentAlignment="Center" FontFamily="Comic Sans MS" FontSize="32"/>
-        <Button Content="Log in" HorizontalAlignment="Left" Margin="778,478,0,0" VerticalAlignment="Top" Height="57" Width="199" BorderBrush="#FF641717" Background="#FF641717" Foreground="White" FontFamily="Comic Sans MS" FontSize="32" Click="Button_Click"/>
-        <Button Content="Close" HorizontalAlignment="Left" Margin="833,552,0,0" VerticalAlignment="Top" Height="57" Width="144" Background="#FF641717" BorderBrush="#FF641717" Foreground="White" FontFamily="Comic Sans MS" FontSize="32" Click="Button_Click_1"/>
+        <TextBox x:Name="login_textbox" HorizontalAlignment="Left" Height="57" Margin="578,251,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="399" VerticalContentAlignment="Center" FontFamily="Comic Sans MS" FontSize="32" TabIndex="20"/>
+        <Button Content="Log in" HorizontalAlignment="Left" Margin="778,478,0,0" VerticalAlignment="Top" Height="57" Width="199" BorderBrush="#FF641717" Background="#FF641717" Foreground="White" FontFamily="Comic Sans MS" FontSize="32" Click="Button_Click" TabIndex="22"/>
+        <Button Content="Close" HorizontalAlignment="Left" Margin="833,552,0,0" VerticalAlignment="Top" Height="57" Width="144" Background="#FF641717" BorderBrush="#FF641717" Foreground="White" FontFamily="Comic Sans MS" FontSize="32" Click="Button_Click_1" TabIndex="24"/>
         <Label Content="libapp" HorizontalAlignment="Left" Margin="62,52,0,0" VerticalAlignment="Top" Height="172" Width="344" FontFamily="Harlow Solid Italic" FontSize="120" Foreground="White"/>
         <Image HorizontalAlignment="Left" Height="296" Margin="66,224,0,0" VerticalAlignment="Top" Width="301" Source="/login.png"/>
-        <Button Content="Register" HorizontalAlignment="Left" Margin="126,539,0,0" VerticalAlignment="Top" Height="58" Width="180" Background="White" Foreground="#FF641717" BorderBrush="Black" FontFamily="Comic Sans MS" FontSize="32" Click="Button_Click_2"/>
-        <TextBox x:Name="password_textbox" HorizontalAlignment="Left" Height="57" Margin="578,398,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="399" VerticalContentAlignment="Center" FontFamily="Comic Sans MS" FontSize="32"/>
+        <Button Content="Register" HorizontalAlignment="Left" Margin="126,539,0,0" VerticalAlignment="Top" Height="58" Width="180" Background="White" Foreground="#FF641717" BorderBrush="Black" FontFamily="Comic Sans MS" FontSize="32" Click="Button_Click_2" TabIndex="23"/>
+        <TextBox x:Name="password_textbox" HorizontalAlignment="Left" Height="57" Margin="578,398,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="399" VerticalContentAlignment="Center" FontFamily="Comic Sans MS" FontSize="32" TabIndex="21"/>
 
     </Grid>
 </Window>
