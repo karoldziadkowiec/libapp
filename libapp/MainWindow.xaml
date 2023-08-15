@@ -11,7 +11,7 @@
         <Label Content="app" HorizontalAlignment="Left" Height="176" Margin="542
                ,61,0,0" VerticalAlignment="Top" Width="265" FontSize="120" FontFamily="Harlow Solid Italic" Foreground="#FF641717"/>
         <Label Content="lib" HorizontalAlignment="Left" Height="176" Margin="297,61,0,0" VerticalAlignment="Top" Width="253" FontSize="120" FontFamily="Harlow Solid Italic" Foreground="White" HorizontalContentAlignment="Right"/>
-        <Button Content="User panel" HorizontalAlignment="Left" Height="155" Margin="153,381,0,0" VerticalAlignment="Top" Width="244" FontFamily="Comic Sans MS" FontSize="36" Click="Button_Click" Foreground="White" BorderBrush="White">
+        <Button Content="Reader panel" HorizontalAlignment="Left" Height="155" Margin="153,381,0,0" VerticalAlignment="Top" Width="244" FontFamily="Comic Sans MS" FontSize="36" Click="Button_Click" Foreground="White" BorderBrush="White">
             <Button.Background>
                 <ImageBrush/>
             </Button.Background>
@@ -23,21 +23,6 @@
         </Button>
         <Image HorizontalAlignment="Left" Height="116" Margin="172,237,0,0" VerticalAlignment="Top" Width="206" Source="/glasses.png"/>
         <Image HorizontalAlignment="Left" Height="109" Margin="782,237,0,0" VerticalAlignment="Top" Width="112" Source="/admin.png"/>
-        <Button Content="User panel" HorizontalAlignment="Left" Height="155" Margin="153,381,0,0" VerticalAlignment="Top" Width="244" FontFamily="Comic Sans MS" FontSize="36" Click="Button_Click" Foreground="White" BorderBrush="White">
-            <Button.Background>
-                <ImageBrush/>
-            </Button.Background>
-        </Button>
-        <Button Content="User panel" HorizontalAlignment="Left" Height="155" Margin="153,381,0,0" VerticalAlignment="Top" Width="244" FontFamily="Comic Sans MS" FontSize="36" Click="Button_Click" Foreground="White" BorderBrush="White">
-            <Button.Background>
-                <ImageBrush/>
-            </Button.Background>
-        </Button>
-        <Button Content="User panel" HorizontalAlignment="Left" Height="155" Margin="153,381,0,0" VerticalAlignment="Top" Width="244" FontFamily="Comic Sans MS" FontSize="36" Click="Button_Click" Foreground="White" BorderBrush="White">
-            <Button.Background>
-                <ImageBrush/>
-            </Button.Background>
-        </Button>
         <Button Content="Exit" HorizontalAlignment="Left" Height="63" Margin="886,580,0,0" VerticalAlignment="Top" Width="169" Click="Button_Click_2" BorderBrush="#FF641717" Background="#FF641717" Foreground="White" FontFamily="Comic Sans MS" FontSize="32"/>
 
     </Grid>

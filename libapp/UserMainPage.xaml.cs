@@ -19,8 +19,8 @@ namespace libapp
     /// </summary>
     public partial class UserMainPage : Window
     {
-        User us = null;
-        public UserMainPage(User user)
+        Reader us = null;
+        public UserMainPage(Reader user)
         {
             InitializeComponent();
             us = user;

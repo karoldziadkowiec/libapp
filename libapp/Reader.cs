@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace libapp
 {
-    public class User
+    public class Reader
     {
         public int id;
         public string name;
@@ -16,7 +16,7 @@ namespace libapp
         public string email;
         public string address;
         public string birthday;
-        public User(int ID, string NAME, string SURNAME, string PESEL, string PHONE, string EMAIL, string ADDRESS, string BIRTHDAY)
+        public Reader(int ID, string NAME, string SURNAME, string PESEL, string PHONE, string EMAIL, string ADDRESS, string BIRTHDAY)
         {
             id = ID;
             name = NAME;

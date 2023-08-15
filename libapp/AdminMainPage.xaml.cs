@@ -24,6 +24,14 @@ namespace libapp
         {
             InitializeComponent();
             admin = administrator;
+            // Pobierz dzisiejszą datę i godzinę
+            DateTime now = DateTime.Now;
+
+            // Przygotuj tekst z nazwą dnia tygodnia i datą
+            string formattedDate = $"{now.DayOfWeek}, {now.ToString("dd/MM/yyyy")}";
+
+            // Przypisz sformatowaną datę i godzinę do Label
+            date_label.Content = formattedDate;
         }
 
         private void Button_Click_2(object sender, RoutedEventArgs e)

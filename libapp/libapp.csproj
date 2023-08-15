@@ -119,6 +119,9 @@
     <Compile Include="AdminBorrowBookPage.xaml.cs">
       <DependentUpon>AdminBorrowBookPage.xaml</DependentUpon>
     </Compile>
+    <Compile Include="AdminEditProfilePage.xaml.cs">
+      <DependentUpon>AdminEditProfilePage.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Administrator.cs" />
     <Compile Include="AdminLoginPage.xaml.cs">
       <DependentUpon>AdminLoginPage.xaml</DependentUpon>
@@ -138,7 +141,7 @@
     <Compile Include="AdminReturnDeadlinesPage.xaml.cs">
       <DependentUpon>AdminReturnDeadlinesPage.xaml</DependentUpon>
     </Compile>
-    <Compile Include="User.cs" />
+    <Compile Include="Reader.cs" />
     <Compile Include="UserLoginPage.xaml.cs">
       <DependentUpon>UserLoginPage.xaml</DependentUpon>
     </Compile>
@@ -158,6 +161,10 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="AdminBorrowBookPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="AdminEditProfilePage.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -247,6 +254,9 @@
   </ItemGroup>
   <ItemGroup>
     <Resource Include="myprofile.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="main.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

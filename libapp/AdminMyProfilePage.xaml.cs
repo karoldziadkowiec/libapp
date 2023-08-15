@@ -1,4 +1,5 @@
-﻿using System;
+﻿using MySql.Data.MySqlClient;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -8,9 +9,11 @@ using System.Windows.Controls;
 using System.Windows.Data;
 using System.Windows.Documents;
 using System.Windows.Input;
+using System.Windows.Markup;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
+using System.Xml.Linq;
 
 namespace libapp
 {
@@ -23,6 +26,12 @@ namespace libapp
         public AdminMyProfilePage(Administrator administrator)
         {
             InitializeComponent();
+
+            name_label.Content = administrator.name;
+            surname_label.Content = administrator.surname;
+            login_textbox.Content = administrator.login;
+            pesel_label.Content = administrator.pesel;
+
             admin = administrator;
         }
 
@@ -84,6 +93,67 @@ namespace libapp
         {
             AdminLoginPage adminloginpage = new AdminLoginPage();
             adminloginpage.Show();
+            this.Hide();
+        }
+
+        private void Button_Click_9(object sender, RoutedEventArgs e)
+        {
+            AdminEditProfilePage admineditprofilepage = new AdminEditProfilePage(admin);
+            admineditprofilepage.Show();
+            this.Hide();
+        }
+
+        private void Button_Click_10(object sender, RoutedEventArgs e)
+        {
+            int adminId = admin.id;
+
+            MessageBoxResult result = MessageBox.Show("Are you sure you want to delete your account?", "libapp", MessageBoxButton.YesNo, MessageBoxImage.Warning);
+
+            if (result == MessageBoxResult.Yes)
+            {
+                try
+                {
+                    string connectionString = "server=localhost;database=libapp;username=root;password=;";
+
+                    using (MySqlConnection connection = new MySqlConnection(connectionString))
+                    {
+                        connection.Open();
+                        string sqlQuery = "DELETE FROM administrators WHERE id = @id";
+                        MySqlCommand command = new MySqlCommand(sqlQuery, connection);
+                        command.Parameters.AddWithValue("@id", adminId);
+                        int rowsAffected = command.ExecuteNonQuery();
+
+                        if (rowsAffected > 0)
+                        {
+                            MessageBox.Show("Account successfully removed.", "libapp");
+                        }
+                        else
+                        {
+                            MessageBox.Show("Account not found.", "libapp");
+                        }
+
+                        connection.Close();
+
+                        AdminLoginPage adminLoginPage = new AdminLoginPage();
+                        adminLoginPage.Show();
+                        this.Hide();
+                    }
+                }
+                catch
+                {
+                    MessageBox.Show("Error removing profile.", "libapp");
+                }
+            }
+            else
+            {
+                this.InvalidateVisual();
+            }
+        }
+
+        private void Button_Click_11(object sender, RoutedEventArgs e)
+        {
+            AdminMainPage adminmainpage = new AdminMainPage(admin);
+            adminmainpage.Show();
             this.Hide();
         }
     }

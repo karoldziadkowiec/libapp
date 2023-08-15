@@ -25,7 +25,7 @@ namespace libapp
             InitializeComponent();
         }
 
-        User user = null;
+        Reader user = null;
         MySqlConnection connection = new MySqlConnection("datasource=localhost;username=root;password=;database=libapp");
         private void Button_Click(object sender, RoutedEventArgs e)
         {
@@ -44,7 +44,7 @@ namespace libapp
             {
                 connection.Open();
 
-                string query = "SELECT * FROM users WHERE pesel = '" + pesel + "'";
+                string query = "SELECT * FROM readers WHERE pesel = '" + pesel + "'";
                 command.CommandText = query;
                 command.Connection = connection;
 
@@ -63,7 +63,7 @@ namespace libapp
                             string address = reader.GetString(6);
                             string birthday = reader.GetString(7);
 
-                            User user = new User(id, name, surname, userPesel, phone, email, address, birthday);
+                            Reader user = new Reader(id, name, surname, userPesel, phone, email, address, birthday);
                             UserMainPage userMainPage = new UserMainPage(user);
 
                             userMainPage.Show();

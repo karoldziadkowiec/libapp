@@ -12,22 +12,28 @@ using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
+using System.Xml.Linq;
 
 namespace libapp
 {
     /// <summary>
-    /// Logika interakcji dla klasy AdminAddReaderPage.xaml
+    /// Logika interakcji dla klasy AdminEditProfilePage.xaml
     /// </summary>
-    public partial class AdminAddReaderPage : Window
+    public partial class AdminEditProfilePage : Window
     {
         Administrator admin = null;
-        public AdminAddReaderPage(Administrator administrator)
+        public AdminEditProfilePage(Administrator administrator)
         {
             InitializeComponent();
+
+            name_textbox.Text = administrator.name;
+            surname_textbox.Text = administrator.surname;
+            login_textbox.Text = administrator.login;
+            pesel_label.Content = administrator.pesel;
+
             admin = administrator;
         }
 
-        string connectionString = "server=localhost;database=libapp;username=root;password=;";
         private void Button_Click_2(object sender, RoutedEventArgs e)
         {
             AdminMainPage adminmainpage = new AdminMainPage(admin);
@@ -51,7 +57,9 @@ namespace libapp
 
         private void Button_Click_3(object sender, RoutedEventArgs e)
         {
-            this.InvalidateVisual();
+            AdminAddReaderPage adminaddreaderpage = new AdminAddReaderPage(admin);
+            adminaddreaderpage.Show();
+            this.Hide();
         }
 
         private void Button_Click_4(object sender, RoutedEventArgs e)
@@ -93,80 +101,64 @@ namespace libapp
         {
             string name = name_textbox.Text;
             string surname = surname_textbox.Text;
-            string pesel = pesel_textbox.Text;
-            string phone = phone_textbox.Text;
-            string email = email_textbox.Text;
-            string address = address_textbox.Text;
-            string birthday = birthday_datepicker.Text;
+            string login = login_textbox.Text;
+            string pesel = pesel_label.Content.ToString();
+            string password = password_textbox.Text;
+            string confirmPassword = confirmpassword_textbox.Text;
 
-            if (string.IsNullOrEmpty(name) || string.IsNullOrEmpty(surname) || string.IsNullOrEmpty(pesel) || string.IsNullOrEmpty(phone) || string.IsNullOrEmpty(email) || string.IsNullOrEmpty(address) || string.IsNullOrEmpty(birthday))
+            if (name.Length == 0 || surname.Length == 0 || login.Length == 0 || password.Length == 0 || confirmPassword.Length == 0)
             {
                 MessageBox.Show("Complete the empty fields.", "libapp");
                 return;
             }
-            if (pesel.Length != 11)
+            if (login.Length < 5 || login.Length > 15)
             {
-                MessageBox.Show("The PESEL number must contain 11 characters.", "libapp");
+                MessageBox.Show("The login must contain from 5 to 15 characters.", "libapp");
                 return;
             }
-            if (phone.Length != 9)
+            if ((password.Length < 5 && password.Length != 0) || (password.Length > 20 && password.Length != 0))
             {
-                MessageBox.Show("The phone number must contain 9 characters.", "libapp");
+                MessageBox.Show("The password must contain between 5 and 20 characters.", "libapp");
                 return;
             }
-            if (!email.Contains('@') || !email.Contains('.'))
+            if (password != confirmPassword)
             {
-                MessageBox.Show("Please, enter a valid email.", "libapp");
+                MessageBox.Show("The passwords provided are different. Correct the data.", "libapp");
                 return;
             }
-            if (!accept_checkbox.IsChecked.HasValue || !accept_checkbox.IsChecked.Value)
-            {
-                MessageBox.Show("Accept the terms of the library.", "libapp");
-                return;
-            }
-
             try
             {
+                string connectionString = "server=localhost;database=libapp;username=root;password=;";
                 using (MySqlConnection connection = new MySqlConnection(connectionString))
                 {
                     connection.Open();
 
-                    string sqlQuery = "INSERT INTO readers (name, surname, pesel, phone, email, address, birthday) VALUES (@name, @surname, @pesel, @phone, @email, @address, @birthday)";
+                    string sqlQuery = "UPDATE administrators SET name='" + name + "', surname='" + surname + "', login='" + login + "', password='" + password + "';";
                     MySqlCommand command = new MySqlCommand(sqlQuery, connection);
-                    command.Parameters.AddWithValue("@name", name);
-                    command.Parameters.AddWithValue("@surname", surname);
-                    command.Parameters.AddWithValue("@pesel", pesel);
-                    command.Parameters.AddWithValue("@phone", phone);
-                    command.Parameters.AddWithValue("@email", email);
-                    command.Parameters.AddWithValue("@address", address);
-                    command.Parameters.AddWithValue("@birthday", birthday);
                     command.ExecuteNonQuery();
+                    admin.name = this.name_textbox.Text;
+                    admin.surname = this.surname_textbox.Text;
+                    admin.login = this.login_textbox.Text;
+                    admin.password = this.password_textbox.Text;
 
-                    MessageBox.Show("Reader successfully registered.", "libapp");
+                    MessageBox.Show("Successfully corrected the data.", "libapp");
                     connection.Close();
 
-                    AdminReadersPage adminreaderspage = new AdminReadersPage(admin);
-                    adminreaderspage.Show();
+                    AdminMyProfilePage adminmyprofilepage = new AdminMyProfilePage(admin);
+                    adminmyprofilepage.Show();
                     this.Hide();
                 }
             }
-            catch (MySqlException ex)
+            catch
             {
-                if (ex.Number == 1062) //for duplicate
-                {
-                    MessageBox.Show("Registration error. The given PESEL already has an account.", "libapp");
-                }
-                else
-                {
-                    MessageBox.Show("An error occurred during registration.", "libapp");
-                }
+                MessageBox.Show("Account edit error. Correct the data.", "libapp");
             }
         }
 
         private void Button_Click_11(object sender, RoutedEventArgs e)
         {
-            AdminMainPage adminmainpage = new AdminMainPage(admin);
-            adminmainpage.Show();
+            AdminMyProfilePage adminmyprofilepage = new AdminMyProfilePage(admin);
+            adminmyprofilepage.Show();
             this.Hide();
         }
     }
