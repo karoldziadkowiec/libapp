@@ -113,6 +113,12 @@
     <Compile Include="AdminAddReaderPage.xaml.cs">
       <DependentUpon>AdminAddReaderPage.xaml</DependentUpon>
     </Compile>
+    <Compile Include="AdminBookListDataPage.xaml.cs">
+      <DependentUpon>AdminBookListDataPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="AdminBookListEditBookPage.xaml.cs">
+      <DependentUpon>AdminBookListEditBookPage.xaml</DependentUpon>
+    </Compile>
     <Compile Include="AdminBookListPage.xaml.cs">
       <DependentUpon>AdminBookListPage.xaml</DependentUpon>
     </Compile>
@@ -147,6 +153,7 @@
     <Compile Include="AdminReturnDeadlinesPage.xaml.cs">
       <DependentUpon>AdminReturnDeadlinesPage.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Book.cs" />
     <Compile Include="Reader.cs" />
     <Compile Include="UserLoginPage.xaml.cs">
       <DependentUpon>UserLoginPage.xaml</DependentUpon>
@@ -159,6 +166,14 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="AdminAddReaderPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="AdminBookListDataPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="AdminBookListEditBookPage.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

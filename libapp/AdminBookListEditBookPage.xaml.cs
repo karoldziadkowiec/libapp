@@ -16,18 +16,54 @@ using System.Windows.Shapes;
 namespace libapp
 {
     /// <summary>
-    /// Logika interakcji dla klasy AdminAddBookPage.xaml
+    /// Logika interakcji dla klasy AdminBookListEditBookPage.xaml
     /// </summary>
-    public partial class AdminAddBookPage : Window
+    public partial class AdminBookListEditBookPage : Window
     {
         Administrator admin = null;
-        public AdminAddBookPage(Administrator administrator)
+        string selectedTitle = null;
+        public AdminBookListEditBookPage(Administrator administrator, string title)
         {
             InitializeComponent();
             admin = administrator;
+            selectedTitle = title;
+            LoadData();
         }
 
-        string connectionString = "server=localhost;database=libapp;username=root;password=;";
+        private void LoadData()
+        {
+            string connectionString = "server=localhost;database=libapp;username=root;password=;";
+
+            using (MySqlConnection connection = new MySqlConnection(connectionString))
+            {
+                try
+                {
+                    connection.Open();
+                    MySqlCommand cmdDataBase = new MySqlCommand("SELECT title, author, publisher, year, time, amount FROM books WHERE title = '" + selectedTitle + "'", connection);
+
+                    using (MySqlDataReader reader = cmdDataBase.ExecuteReader())
+                    {
+                        if (reader.Read())
+                        {
+                            title_textbox.Text = reader["title"].ToString();
+                            author_textbox.Text = reader["author"].ToString();
+                            publisher_textbox.Text = reader["publisher"].ToString();
+                            year_textbox.Text = reader["year"].ToString();
+                            time_textbox.Text = reader["time"].ToString();
+                            amount_textbox.Text = reader["amount"].ToString();
+                        }
+                        else
+                        {
+                            MessageBox.Show("No data found for the selected title.");
+                        }
+                    }
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show("Error: " + ex.Message);
+                }
+            }
+        }
 
         private void Button_Click_2(object sender, RoutedEventArgs e)
         {
@@ -80,7 +116,9 @@ namespace libapp
 
         private void Button_Click_7(object sender, RoutedEventArgs e)
         {
-            this.InvalidateVisual();
+            AdminAddBookPage adminaddbookpage = new AdminAddBookPage(admin);
+            adminaddbookpage.Show();
+            this.Hide();
         }
 
         private void Button_Click_8(object sender, RoutedEventArgs e)
@@ -124,11 +162,16 @@ namespace libapp
 
             try
             {
+                string connectionString = "server=localhost;database=libapp;username=root;password=;";
+
                 using (MySqlConnection connection = new MySqlConnection(connectionString))
                 {
                     connection.Open();
 
-                    string sqlQuery = "INSERT INTO books (title, author, publisher, year, time, amount) VALUES (@title, @author, @publisher, @year, @time, @amount)";
+                    string sqlQuery = "UPDATE books SET title = @title, author = @author, "
+                                    + "publisher = @publisher, year = @year, time = @time, amount = @amount "
+                                    + "WHERE title = @selectedTitle";
+
                     MySqlCommand command = new MySqlCommand(sqlQuery, connection);
                     command.Parameters.AddWithValue("@title", title);
                     command.Parameters.AddWithValue("@author", author);
@@ -136,28 +179,30 @@ namespace libapp
                     command.Parameters.AddWithValue("@year", year);
                     command.Parameters.AddWithValue("@time", time);
                     command.Parameters.AddWithValue("@amount", amount);
+                    command.Parameters.AddWithValue("@selectedTitle", selectedTitle);
+
                     command.ExecuteNonQuery();
 
-                    MessageBox.Show("Book successfully added to the system.", "libapp");
+                    MessageBox.Show("Successfully corrected the data.", "libapp");
                     connection.Close();
 
-                    AdminBookListPage adminbooklistpage = new AdminBookListPage(admin);
-                    adminbooklistpage.Show();
+                    AdminBookListDataPage adminbooklistdatapage = new AdminBookListDataPage(admin, title);
+                    adminbooklistdatapage.Show();
                     this.Hide();
                 }
             }
-            catch (MySqlException ex)
+            catch (Exception ex)
             {
-                MessageBox.Show("Addition error", "libapp");
+                MessageBox.Show("Book edit error. Correct the data.\nError: " + ex.Message, "libapp");
             }
         }
 
-
         private void Button_Click_11(object sender, RoutedEventArgs e)
         {
-            AdminMainPage adminmainpage = new AdminMainPage(admin);
-            adminmainpage.Show();
+            AdminBookListDataPage adminbooklistdatapage = new AdminBookListDataPage(admin, selectedTitle);
+            adminbooklistdatapage.Show();
             this.Hide();
         }
+
     }
 }

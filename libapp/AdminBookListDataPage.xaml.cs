@@ -17,15 +17,17 @@ using System.Windows.Shapes;
 namespace libapp
 {
     /// <summary>
-    /// Logika interakcji dla klasy AdminBookListPage.xaml
+    /// Logika interakcji dla klasy AdminBookListDataPage.xaml
     /// </summary>
-    public partial class AdminBookListPage : Window
+    public partial class AdminBookListDataPage : Window
     {
         Administrator admin = null;
-        public AdminBookListPage(Administrator administrator)
+        string selectedTitle = null;
+        public AdminBookListDataPage(Administrator administrator, string title)
         {
             InitializeComponent();
             admin = administrator;
+            selectedTitle = title;
             LoadData();
         }
 
@@ -38,18 +40,24 @@ namespace libapp
                 try
                 {
                     connection.Open();
+                    MySqlCommand cmdDataBase = new MySqlCommand("SELECT title, author, publisher, year, time, amount FROM books WHERE title = '" + selectedTitle + "'", connection);
 
-                    MySqlCommand countCmd = new MySqlCommand("SELECT COUNT(*) FROM books", connection);
-                    int totalBookCount = Convert.ToInt32(countCmd.ExecuteScalar());
-                    count_label.Content = totalBookCount;
-
-                    MySqlCommand cmdDataBase = new MySqlCommand("SELECT title AS 'Book title', author AS 'Author', publisher AS 'Publisher', year AS 'Release date', time AS 'Holding days' FROM books ORDER BY title ASC", connection);
-
-                    MySqlDataAdapter adapter = new MySqlDataAdapter(cmdDataBase);
-                    DataTable dt = new DataTable();
-                    adapter.Fill(dt);
-
-                    books_table.ItemsSource = dt.DefaultView;
+                    using (MySqlDataReader reader = cmdDataBase.ExecuteReader())
+                    {
+                        if (reader.Read())
+                        {
+                            title_label.Content = reader["title"].ToString();
+                            author_label.Content = reader["author"].ToString();
+                            publisher_label.Content = reader["publisher"].ToString();
+                            year_label.Content = reader["year"].ToString();
+                            time_label.Content = reader["time"].ToString();
+                            amount_label.Content = reader["amount"].ToString();
+                        }
+                        else
+                        {
+                            MessageBox.Show("No data found for the selected title.");
+                        }
+                    }
                 }
                 catch (Exception ex)
                 {
@@ -95,7 +103,9 @@ namespace libapp
 
         private void Button_Click_5(object sender, RoutedEventArgs e)
         {
-            this.InvalidateVisual();
+            AdminBookListPage adminbooklistpage = new AdminBookListPage(admin);
+            adminbooklistpage.Show();
+            this.Hide();
         }
 
         private void Button_Click_6(object sender, RoutedEventArgs e)
@@ -121,62 +131,60 @@ namespace libapp
 
         private void Button_Click_9(object sender, RoutedEventArgs e)
         {
-            string selectedTitle = title_textbox.Text;
-
-            if (!string.IsNullOrEmpty(selectedTitle))
-            {
-                try
-                {
-                    string connectionString = "server=localhost;database=libapp;username=root;password=;";
-                    using (MySqlConnection connection = new MySqlConnection(connectionString))
-                    {
-                        connection.Open();
-
-                        string sqlQuery = "SELECT COUNT(*) FROM books WHERE title = @selectedTitle";
-                        MySqlCommand command = new MySqlCommand(sqlQuery, connection);
-                        command.Parameters.AddWithValue("@selectedTitle", selectedTitle);
-
-                        int bookCount = Convert.ToInt32(command.ExecuteScalar());
-
-                        if (bookCount > 0)
-                        {
-                            AdminBookListDataPage adminbooklistdatapage = new AdminBookListDataPage(admin, selectedTitle);
-                            adminbooklistdatapage.Show();
-                            this.Hide();
-                        }
-                        else
-                        {
-                            MessageBox.Show("The selected book title does not exist.", "libapp");
-                        }
-
-                        connection.Close();
-                    }
-                }
-                catch (Exception ex)
-                {
-                    MessageBox.Show("Error: " + ex.Message, "libapp");
-                }
-            }
-            else
-            {
-                MessageBox.Show("Please, select a valid Title before proceeding.");
-            }
+            AdminBookListEditBookPage adminbooklisteditbookpage = new AdminBookListEditBookPage(admin, selectedTitle);
+            adminbooklisteditbookpage.Show();
+            this.Hide();
         }
 
         private void Button_Click_11(object sender, RoutedEventArgs e)
         {
-            AdminMainPage adminmainpage = new AdminMainPage(admin);
-            adminmainpage.Show();
+            AdminBookListPage adminbooklistpage = new AdminBookListPage(admin);
+            adminbooklistpage.Show();
             this.Hide();
         }
 
-        private void DataGrid_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        private void Button_Click_10(object sender, RoutedEventArgs e)
         {
-            if (books_table.SelectedItem != null)
+            MessageBoxResult result = MessageBox.Show("Are you sure you want to delete this book?", "libapp", MessageBoxButton.YesNo, MessageBoxImage.Warning);
+
+            if (result == MessageBoxResult.Yes)
             {
-                DataRowView selectedRow = (DataRowView)books_table.SelectedItem;
-                string selectedValue = selectedRow["Book title"].ToString();
-                title_textbox.Text = selectedValue;
+                try
+                {
+                    string connectionString = "server=localhost;database=libapp;username=root;password=;";
+
+                    using (MySqlConnection connection = new MySqlConnection(connectionString))
+                    {
+                        connection.Open();
+                        string sqlQuery = "DELETE FROM books WHERE title = @title";
+                        MySqlCommand command = new MySqlCommand(sqlQuery, connection);
+                        command.Parameters.AddWithValue("@title", selectedTitle);
+                        int rowsAffected = command.ExecuteNonQuery();
+
+                        if (rowsAffected > 0)
+                        {
+                            MessageBox.Show("Book successfully removed.", "libapp");
+                        }
+                        else
+                        {
+                            MessageBox.Show("Book not found.", "libapp");
+                        }
+
+                        connection.Close();
+
+                        AdminBookListPage adminbooklistpage = new AdminBookListPage(admin);
+                        adminbooklistpage.Show();
+                        this.Hide();
+                    }
+                }
+                catch
+                {
+                    MessageBox.Show("Error removing profile.", "libapp");
+                }
+            }
+            else
+            {
+                this.InvalidateVisual();
             }
         }
     }

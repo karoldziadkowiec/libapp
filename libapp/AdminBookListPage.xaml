@@ -21,5 +21,12 @@
         <Rectangle HorizontalAlignment="Left" Height="82" Margin="0,207,0,0" Stroke="Black" VerticalAlignment="Top" Width="37" Fill="White"/>
         <Label Content="Book list" HorizontalAlignment="Left" Margin="371,146,0,0" VerticalAlignment="Top" Width="227" Height="61" Foreground="#FF641717" FontFamily="Comic Sans MS" FontSize="32" VerticalContentAlignment="Center" FontWeight="Bold"/>
         <Rectangle HorizontalAlignment="Left" Height="61" Margin="352,146,0,0" Stroke="#FF641717" VerticalAlignment="Top" Width="14" Fill="#FF450000"/>
+        <Label Content="Search for a book by title:" HorizontalAlignment="Left" Margin="352,506,0,0" VerticalAlignment="Top" Width="588" Height="48" Foreground="#FF641717" FontFamily="Comic Sans MS" FontSize="22" VerticalContentAlignment="Center"/>
+        <TextBox x:Name="title_textbox" HorizontalAlignment="Left" Margin="358,559,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="438" Height="40" FontFamily="Comic Sans MS" FontSize="20" VerticalContentAlignment="Center" BorderBrush="#FF641717" TabIndex="30"/>
+        <Button Content="Search" HorizontalAlignment="Left" Margin="828,559,0,0" VerticalAlignment="Top" Height="40" Width="200" BorderBrush="#FF641717" Foreground="White" Background="#FF641717" FontFamily="Comic Sans MS" FontSize="24" Click="Button_Click_9"/>
+        <Button Content="Close" HorizontalAlignment="Left" Margin="874,607,0,0" VerticalAlignment="Top" Height="40" Width="154" Background="#FF641717" Foreground="White" BorderBrush="#FF641717" FontFamily="Comic Sans MS" FontSize="24" Click="Button_Click_11" RenderTransformOrigin="0.222,1.02"/>
+        <DataGrid x:Name="books_table" d:ItemsSource="{d:SampleData ItemCount=5}" Height="277" Margin="364,230,72,177" SelectionChanged="DataGrid_SelectionChanged" FontFamily="Comic Sans MS" HeadersVisibility="Column"/>
+        <Label Content="Number of titles:" HorizontalAlignment="Left" Margin="791,157,0,0" VerticalAlignment="Top" Width="188" Height="48" Foreground="#FF641717" FontFamily="Comic Sans MS" FontSize="22" VerticalContentAlignment="Center"/>
+        <Label x:Name="count_label" Content="count" HorizontalAlignment="Left" Margin="979,157,0,0" VerticalAlignment="Top" Width="71" Height="48" Foreground="#FF641717" FontFamily="Comic Sans MS" FontSize="22" VerticalContentAlignment="Center"/>
     </Grid>
 </Window>

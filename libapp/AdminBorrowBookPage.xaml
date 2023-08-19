@@ -21,5 +21,15 @@
         <Rectangle HorizontalAlignment="Left" Height="82" Margin="0,125,0,0" Stroke="Black" VerticalAlignment="Top" Width="37" Fill="White"/>
         <Rectangle HorizontalAlignment="Left" Height="61" Margin="352,146,0,0" Stroke="#FF641717" VerticalAlignment="Top" Width="14" Fill="#FF450000"/>
         <Label Content="Borrow book" HorizontalAlignment="Left" Margin="371,146,0,0" VerticalAlignment="Top" Width="227" Height="61" Foreground="#FF641717" FontFamily="Comic Sans MS" FontSize="32" VerticalContentAlignment="Center" FontWeight="Bold"/>
+        <Label Content="Book" HorizontalAlignment="Left" Margin="359,437,0,0" VerticalAlignment="Top" Width="323" Height="46" Foreground="#FF641717" FontFamily="Comic Sans MS" FontSize="32" VerticalContentAlignment="Center"/>
+        <Rectangle HorizontalAlignment="Left" Height="2" Margin="359,487,0,0" Stroke="#FF641717" VerticalAlignment="Top" Width="426" Fill="#FF641717"/>
+        <TextBox x:Name="book_textbox" HorizontalAlignment="Left" Margin="359,493,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="426" Height="103" FontFamily="Comic Sans MS" FontSize="25" VerticalContentAlignment="Center" BorderBrush="#FF641717" TabIndex="30"/>
+        <Label Content="Reader" HorizontalAlignment="Left" Margin="814,437,0,0" VerticalAlignment="Top" Width="222" Height="46" Foreground="#FF641717" FontFamily="Comic Sans MS" FontSize="32"/>
+        <TextBox x:Name="reader_textbox" HorizontalAlignment="Left" Margin="814,494,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="222" Height="47" FontFamily="Comic Sans MS" FontSize="25" VerticalContentAlignment="Center" BorderBrush="#FF641717" TabIndex="31"/>
+        <Rectangle HorizontalAlignment="Left" Height="3" Margin="814,487,0,0" Stroke="#FF641717" VerticalAlignment="Top" Width="222" Fill="#FF641717"/>
+        <DataGrid x:Name="books_table" d:ItemsSource="{d:SampleData ItemCount=5}" Margin="359,230,315,232" SelectionChanged="DataGrid_SelectionChanged" HeadersVisibility="Column" FontFamily="Comic Sans MS" FontSize="11"/>
+        <DataGrid x:Name="readers_table" d:ItemsSource="{d:SampleData ItemCount=5}" Margin="814,230,64,232" SelectionChanged="DataGrid_SelectionChanged_1" HeadersVisibility="Column" FontFamily="Comic Sans MS" FontSize="11"/>
+        <Button Content="Borrow" HorizontalAlignment="Left" Margin="814,546,0,0" VerticalAlignment="Top" Height="50" Width="222" Background="#FF641717" Foreground="White" BorderBrush="#FF641717" FontFamily="Comic Sans MS" FontSize="24" Click="Button_Click_9" TabIndex="37"/>
+        <Button Content="Close" HorizontalAlignment="Left" Margin="872,601,0,0" VerticalAlignment="Top" Height="49" Width="164" Background="#FF641717" Foreground="White" BorderBrush="#FF641717" FontFamily="Comic Sans MS" FontSize="24" Click="Button_Click_11" RenderTransformOrigin="0.222,1.02"/>
     </Grid>
 </Window>
