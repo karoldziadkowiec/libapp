@@ -155,11 +155,23 @@
     </Compile>
     <Compile Include="Book.cs" />
     <Compile Include="Reader.cs" />
+    <Compile Include="UserBookListDataPage.xaml.cs">
+      <DependentUpon>UserBookListDataPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="UserBookListPage.xaml.cs">
+      <DependentUpon>UserBookListPage.xaml</DependentUpon>
+    </Compile>
     <Compile Include="UserLoginPage.xaml.cs">
       <DependentUpon>UserLoginPage.xaml</DependentUpon>
     </Compile>
     <Compile Include="UserMainPage.xaml.cs">
       <DependentUpon>UserMainPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="UserMyProfilePage.xaml.cs">
+      <DependentUpon>UserMyProfilePage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="UserReturnDeadlinesPage.xaml.cs">
+      <DependentUpon>UserReturnDeadlinesPage.xaml</DependentUpon>
     </Compile>
     <Page Include="AdminAddBookPage.xaml">
       <SubType>Designer</SubType>
@@ -233,11 +245,27 @@
       <DependentUpon>MainWindow.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
+    <Page Include="UserBookListDataPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="UserBookListPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="UserLoginPage.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="UserMainPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="UserMyProfilePage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="UserReturnDeadlinesPage.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

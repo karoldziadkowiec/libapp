@@ -15,36 +15,27 @@ using System.Windows.Shapes;
 namespace libapp
 {
     /// <summary>
-    /// Logika interakcji dla klasy UserMainPage.xaml
+    /// Logika interakcji dla klasy UserMyProfilePage.xaml
     /// </summary>
-    public partial class UserMainPage : Window
+    public partial class UserMyProfilePage : Window
     {
         Reader us = null;
-        public UserMainPage(Reader user)
+        public UserMyProfilePage(Reader user)
         {
             InitializeComponent();
             us = user;
-
-            // Pobierz dzisiejszą datę i godzinę
-            DateTime now = DateTime.Now;
-
-            // Przygotuj tekst z nazwą dnia tygodnia i datą
-            string formattedDate = $"{now.DayOfWeek}, {now.ToString("dd/MM/yyyy")}";
-
-            // Przypisz sformatowaną datę i godzinę do Label
-            date_label.Content = formattedDate;
         }
 
         private void Button_Click_2(object sender, RoutedEventArgs e)
         {
-            this.InvalidateVisual();
+            UserMainPage usermainpage = new UserMainPage(us);
+            usermainpage.Show();
+            this.Hide();
         }
 
         private void Button_Click(object sender, RoutedEventArgs e)
         {
-            UserMyProfilePage usermyprofilepage = new UserMyProfilePage(us);
-            usermyprofilepage.Show();
-            this.Hide();
+            this.InvalidateVisual();
         }
 
         private void Button_Click_6(object sender, RoutedEventArgs e)
