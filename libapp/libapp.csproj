@@ -161,6 +161,9 @@
     <Compile Include="UserBookListPage.xaml.cs">
       <DependentUpon>UserBookListPage.xaml</DependentUpon>
     </Compile>
+    <Compile Include="UserEditProfilePage.xaml.cs">
+      <DependentUpon>UserEditProfilePage.xaml</DependentUpon>
+    </Compile>
     <Compile Include="UserLoginPage.xaml.cs">
       <DependentUpon>UserLoginPage.xaml</DependentUpon>
     </Compile>
@@ -250,6 +253,10 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="UserBookListPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="UserEditProfilePage.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

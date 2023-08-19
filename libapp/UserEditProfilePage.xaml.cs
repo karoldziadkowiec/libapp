@@ -15,12 +15,12 @@ using System.Windows.Shapes;
 namespace libapp
 {
     /// <summary>
-    /// Logika interakcji dla klasy UserMyProfilePage.xaml
+    /// Logika interakcji dla klasy UserEditProfilePage.xaml
     /// </summary>
-    public partial class UserMyProfilePage : Window
+    public partial class UserEditProfilePage : Window
     {
         Reader us = null;
-        public UserMyProfilePage(Reader user)
+        public UserEditProfilePage(Reader user)
         {
             InitializeComponent();
             us = user;
@@ -35,7 +35,9 @@ namespace libapp
 
         private void Button_Click(object sender, RoutedEventArgs e)
         {
-            this.InvalidateVisual();
+            UserMyProfilePage usermyprofilepage = new UserMyProfilePage(us);
+            usermyprofilepage.Show();
+            this.Hide();
         }
 
         private void Button_Click_6(object sender, RoutedEventArgs e)
@@ -61,15 +63,15 @@ namespace libapp
 
         private void Button_Click_9(object sender, RoutedEventArgs e)
         {
-            UserEditProfilePage usereditprofilepage = new UserEditProfilePage(us);
-            usereditprofilepage.Show();
+            UserMyProfilePage usermyprofilepage = new UserMyProfilePage(us);
+            usermyprofilepage.Show();
             this.Hide();
         }
 
         private void Button_Click_11(object sender, RoutedEventArgs e)
         {
-            UserMainPage usermainpage = new UserMainPage(us);
-            usermainpage.Show();
+            UserMyProfilePage usermyprofilepage = new UserMyProfilePage(us);
+            usermyprofilepage.Show();
             this.Hide();
         }
     }

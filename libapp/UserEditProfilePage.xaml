@@ -1,4 +1,4 @@
-﻿<Window x:Class="libapp.UserMyProfilePage"
+﻿<Window x:Class="libapp.UserEditProfilePage"
         xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
@@ -15,9 +15,9 @@
         <Rectangle HorizontalAlignment="Left" Height="125" Margin="290,0,0,0" Stroke="Black" VerticalAlignment="Top" Width="810" Fill="Black"/>
         <Button Content="My profile" HorizontalAlignment="Left" Margin="831,0,0,0" VerticalAlignment="Top" Height="125" Width="269" Foreground="White" Background="#FF412222" BorderBrush="White" FontFamily="Comic Sans MS" FontSize="32" HorizontalContentAlignment="Center" Click="Button_Click"/>
         <Rectangle HorizontalAlignment="Left" Height="61" Margin="352,146,0,0" Stroke="#FF641717" VerticalAlignment="Top" Width="14" Fill="#FF450000"/>
-        <Label Content="My profile" HorizontalAlignment="Left" Margin="371,146,0,0" VerticalAlignment="Top" Width="227" Height="61" Foreground="#FF641717" FontFamily="Comic Sans MS" FontSize="32" VerticalContentAlignment="Center" FontWeight="Bold"/>
+        <Label Content="My profile &gt;&gt; Edit Profile" HorizontalAlignment="Left" Margin="371,146,0,0" VerticalAlignment="Top" Width="465" Height="61" Foreground="#FF641717" FontFamily="Comic Sans MS" FontSize="32" VerticalContentAlignment="Center" FontWeight="Bold"/>
         <Rectangle HorizontalAlignment="Left" Height="24" Margin="831,101,0,0" Stroke="Black" VerticalAlignment="Top" Width="269" Fill="White"/>
-        <Button Content="Edit profile" HorizontalAlignment="Left" Margin="696,450,0,0" VerticalAlignment="Top" Height="62" Width="174" Background="#FF641717" Foreground="White" BorderBrush="#FF641717" FontFamily="Comic Sans MS" FontSize="24" Click="Button_Click_9"/>
-        <Button Content="Close" HorizontalAlignment="Left" Margin="738,540,0,0" VerticalAlignment="Top" Height="62" Width="132" Background="#FF641717" Foreground="White" BorderBrush="#FF641717" FontFamily="Comic Sans MS" FontSize="24" Click="Button_Click_11"/>
+        <Button Content="Save" HorizontalAlignment="Left" Margin="765,530,0,0" VerticalAlignment="Top" Height="50" Width="236" Background="#FF641717" Foreground="White" BorderBrush="#FF641717" FontFamily="Comic Sans MS" FontSize="24" Click="Button_Click_9"/>
+        <Button Content="Close" HorizontalAlignment="Left" Margin="837,587,0,0" VerticalAlignment="Top" Height="50" Width="164" Background="#FF641717" Foreground="White" BorderBrush="#FF641717" FontFamily="Comic Sans MS" FontSize="24" Click="Button_Click_11" RenderTransformOrigin="0.222,1.02"/>
     </Grid>
 </Window>
