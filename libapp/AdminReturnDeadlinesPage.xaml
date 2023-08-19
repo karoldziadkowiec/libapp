@@ -21,5 +21,11 @@
         <Rectangle HorizontalAlignment="Left" Height="81" Margin="0,289,0,0" Stroke="Black" VerticalAlignment="Top" Width="37" Fill="White"/>
         <Rectangle HorizontalAlignment="Left" Height="61" Margin="352,146,0,0" Stroke="#FF641717" VerticalAlignment="Top" Width="14" Fill="#FF450000"/>
         <Label Content="Return deadlines" HorizontalAlignment="Left" Margin="371,146,0,0" VerticalAlignment="Top" Width="305" Height="61" Foreground="#FF641717" FontFamily="Comic Sans MS" FontSize="32" VerticalContentAlignment="Center" FontWeight="Bold"/>
+        <DataGrid x:Name="borrowing_table" d:ItemsSource="{d:SampleData ItemCount=5}" Margin="312,217,22,231" SelectionChanged="DataGrid_SelectionChanged" FontFamily="Comic Sans MS" FontSize="10" HeadersVisibility="Column" BorderBrush="#FF641717"/>
+        <Label Content="Borrowing ID" HorizontalAlignment="Left" Margin="570,458,0,0" VerticalAlignment="Top" Width="222" Height="56" Foreground="#FF641717" FontFamily="Comic Sans MS" FontSize="32"/>
+        <Rectangle HorizontalAlignment="Left" Height="3" Margin="570,509,0,0" Stroke="#FF641717" VerticalAlignment="Top" Width="222" Fill="#FF641717"/>
+        <TextBox x:Name="id_textbox" HorizontalAlignment="Left" Margin="570,514,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="222" Height="47" FontFamily="Comic Sans MS" FontSize="25" VerticalContentAlignment="Center" BorderBrush="#FF641717" TabIndex="31"/>
+        <Button Content="Return" HorizontalAlignment="Left" Margin="826,511,0,0" VerticalAlignment="Top" Height="50" Width="222" Background="#FF641717" Foreground="White" BorderBrush="#FF641717" FontFamily="Comic Sans MS" FontSize="24" Click="Button_Click_9" TabIndex="37"/>
+        <Button Content="Close" HorizontalAlignment="Left" Margin="884,573,0,0" VerticalAlignment="Top" Height="49" Width="164" Background="#FF641717" Foreground="White" BorderBrush="#FF641717" FontFamily="Comic Sans MS" FontSize="24" Click="Button_Click_11" RenderTransformOrigin="0.222,1.02"/>
     </Grid>
 </Window>

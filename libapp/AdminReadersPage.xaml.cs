@@ -40,6 +40,7 @@ namespace libapp
                     connection.Open();
                     MySqlCommand cmdDataBase = new MySqlCommand("SELECT surname AS 'Surname', name AS 'Name', pesel AS 'PESEL number', birthday AS 'Birthday', phone AS 'Phone number', email AS 'E-mail', address AS 'Address' FROM readers ORDER BY surname ASC", connection);
 
+
                     MySqlDataAdapter adapter = new MySqlDataAdapter(cmdDataBase);
                     DataTable dt = new DataTable();
                     adapter.Fill(dt);

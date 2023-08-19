@@ -41,8 +41,17 @@ namespace libapp
                 try
                 {
                     connection.Open();
-                    MySqlCommand cmdDataBase = new MySqlCommand("SELECT name, surname, pesel, phone, email, address, birthday FROM readers WHERE pesel = '" + selectedPesel + "'", connection);
 
+                    string sqlQueryGetReaderID = "SELECT id FROM readers WHERE pesel='" + selectedPesel + "'";
+                    MySqlCommand commandGetReaderID = new MySqlCommand(sqlQueryGetReaderID, connection);
+                    int readerID = Convert.ToInt32(commandGetReaderID.ExecuteScalar());
+                    MySqlCommand cmdDataBase = new MySqlCommand("SELECT name, surname, pesel, phone, email, address, birthday FROM readers WHERE pesel = '" + selectedPesel + "'", connection);
+                    
+                    MySqlCommand cmdBorrowing = new MySqlCommand("SELECT books.title AS 'Book', books.author AS 'Author', DATEDIFF(borrowing.return_date, CURDATE()) AS 'Days to return', borrowing.borrow_date AS 'Borrow date', borrowing.return_date AS 'Return date' FROM borrowing, books, readers WHERE borrowing.reader='" + readerID + "' AND borrowing.book = books.id AND borrowing.reader = readers.id ORDER BY borrowing.return_date ASC", connection);
+                    MySqlDataAdapter BorrowingAdapter = new MySqlDataAdapter(cmdBorrowing);
+                    DataTable borrowingDt = new DataTable();
+                    BorrowingAdapter.Fill(borrowingDt);
+                    readers_table.ItemsSource = borrowingDt.DefaultView;
                     using (MySqlDataReader reader = cmdDataBase.ExecuteReader())
                     {
                         if (reader.Read())

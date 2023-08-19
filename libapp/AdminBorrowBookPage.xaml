@@ -27,8 +27,8 @@
         <Label Content="Reader" HorizontalAlignment="Left" Margin="814,437,0,0" VerticalAlignment="Top" Width="222" Height="46" Foreground="#FF641717" FontFamily="Comic Sans MS" FontSize="32"/>
         <TextBox x:Name="reader_textbox" HorizontalAlignment="Left" Margin="814,494,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="222" Height="47" FontFamily="Comic Sans MS" FontSize="25" VerticalContentAlignment="Center" BorderBrush="#FF641717" TabIndex="31"/>
         <Rectangle HorizontalAlignment="Left" Height="3" Margin="814,487,0,0" Stroke="#FF641717" VerticalAlignment="Top" Width="222" Fill="#FF641717"/>
-        <DataGrid x:Name="books_table" d:ItemsSource="{d:SampleData ItemCount=5}" Margin="359,230,315,232" SelectionChanged="DataGrid_SelectionChanged" HeadersVisibility="Column" FontFamily="Comic Sans MS" FontSize="11"/>
-        <DataGrid x:Name="readers_table" d:ItemsSource="{d:SampleData ItemCount=5}" Margin="814,230,64,232" SelectionChanged="DataGrid_SelectionChanged_1" HeadersVisibility="Column" FontFamily="Comic Sans MS" FontSize="11"/>
+        <DataGrid x:Name="books_table" d:ItemsSource="{d:SampleData ItemCount=5}" Margin="359,230,315,232" SelectionChanged="DataGrid_SelectionChanged" HeadersVisibility="Column" FontFamily="Comic Sans MS" FontSize="11" BorderBrush="#FF641717"/>
+        <DataGrid x:Name="readers_table" d:ItemsSource="{d:SampleData ItemCount=5}" Margin="814,230,64,232" SelectionChanged="DataGrid_SelectionChanged_1" HeadersVisibility="Column" FontFamily="Comic Sans MS" FontSize="11" BorderBrush="#FF641717"/>
         <Button Content="Borrow" HorizontalAlignment="Left" Margin="814,546,0,0" VerticalAlignment="Top" Height="50" Width="222" Background="#FF641717" Foreground="White" BorderBrush="#FF641717" FontFamily="Comic Sans MS" FontSize="24" Click="Button_Click_9" TabIndex="37"/>
         <Button Content="Close" HorizontalAlignment="Left" Margin="872,601,0,0" VerticalAlignment="Top" Height="49" Width="164" Background="#FF641717" Foreground="White" BorderBrush="#FF641717" FontFamily="Comic Sans MS" FontSize="24" Click="Button_Click_11" RenderTransformOrigin="0.222,1.02"/>
     </Grid>

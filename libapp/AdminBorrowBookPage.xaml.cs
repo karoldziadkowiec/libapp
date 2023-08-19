@@ -161,8 +161,8 @@ namespace libapp
                     MySqlCommand borrowCommand = new MySqlCommand(borrowSqlQuery, connection);
                     borrowCommand.Parameters.AddWithValue("@book", BookId);
                     borrowCommand.Parameters.AddWithValue("@reader", ReaderId);
-                    borrowCommand.Parameters.AddWithValue("@borrow_date", currentDate.ToString("yyyy-MM-dd"));
-                    borrowCommand.Parameters.AddWithValue("@return_date", returnDate.ToString("yyyy-MM-dd"));
+                    borrowCommand.Parameters.AddWithValue("@borrow_date", currentDate.ToString("yyyy-MM-dd hh:mm:ss"));
+                    borrowCommand.Parameters.AddWithValue("@return_date", returnDate.ToString("yyyy-MM-dd hh:mm:ss"));
                     borrowCommand.ExecuteNonQuery();
 
                     // Updating amount in the 'books' table
