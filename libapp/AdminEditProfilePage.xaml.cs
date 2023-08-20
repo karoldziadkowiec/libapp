@@ -103,8 +103,8 @@ namespace libapp
             string adminSurname = surname_textbox.Text;
             string adminLogin = login_textbox.Text;
             string adminPesel = pesel_label.Content.ToString();
-            string adminPassword = password_textbox.Text;
-            string adminConfirmPassword = confirmpassword_textbox.Text;
+            string adminPassword = password_box.Password;
+            string adminConfirmPassword = confirmPassword_box.Password;
 
             if (string.IsNullOrEmpty(adminName) || string.IsNullOrEmpty(adminSurname) || string.IsNullOrEmpty(adminLogin) || string.IsNullOrEmpty(adminPassword) || string.IsNullOrEmpty(adminConfirmPassword))
             {

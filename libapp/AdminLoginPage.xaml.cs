@@ -30,7 +30,7 @@ namespace libapp
         private void Button_Click(object sender, RoutedEventArgs e)
         {
             string login = login_textbox.Text;
-            string password = password_textbox.Text;
+            string password = password_box.Password;
 
             MySqlCommand command = new MySqlCommand();
 

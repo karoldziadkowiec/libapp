@@ -29,9 +29,7 @@
         <TextBox x:Name="name_textbox" HorizontalAlignment="Left" Margin="425,263,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="276" Height="50" FontFamily="Comic Sans MS" FontSize="25" VerticalContentAlignment="Center" BorderBrush="#FF641717"/>
         <TextBox x:Name="surname_textbox" HorizontalAlignment="Left" Margin="725,263,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="276" Height="50" FontFamily="Comic Sans MS" FontSize="25" VerticalContentAlignment="Center" BorderBrush="#FF641717"/>
         <TextBox x:Name="login_textbox" HorizontalAlignment="Left" Margin="425,371,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="276" Height="49" FontFamily="Comic Sans MS" FontSize="25" VerticalContentAlignment="Center" BorderBrush="#FF641717"/>
-        <TextBox x:Name="password_textbox" HorizontalAlignment="Left" Margin="425,473,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="276" Height="49" FontFamily="Comic Sans MS" FontSize="25" VerticalContentAlignment="Center" BorderBrush="#FF641717"/>
         <Rectangle HorizontalAlignment="Left" Height="3" Margin="725,465,0,0" Stroke="#FF641717" VerticalAlignment="Top" Width="276" Fill="#FF641717"/>
-        <TextBox x:Name="confirmpassword_textbox" HorizontalAlignment="Left" Margin="725,473,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="276" Height="49" FontFamily="Comic Sans MS" FontSize="25" VerticalContentAlignment="Center" BorderBrush="#FF641717"/>
         <Rectangle HorizontalAlignment="Left" Height="3" Margin="725,363,0,0" Stroke="#FF641717" VerticalAlignment="Top" Width="276" Fill="#FF641717"/>
         <Label Content="Name" HorizontalAlignment="Left" Margin="425,202,0,0" VerticalAlignment="Top" Width="276" Height="49" Foreground="#FF641717" FontFamily="Comic Sans MS" FontSize="32" VerticalContentAlignment="Center"/>
         <Label Content="Surname" HorizontalAlignment="Left" Margin="725,202,0,0" VerticalAlignment="Top" Width="276" Height="49" Foreground="#FF641717" FontFamily="Comic Sans MS" FontSize="32"/>
@@ -41,5 +39,7 @@
         <Label Content="Confirm password" HorizontalAlignment="Left" Margin="725,413,0,0" VerticalAlignment="Top" Width="276" Height="54" Foreground="#FF641717" FontFamily="Comic Sans MS" FontSize="32" VerticalContentAlignment="Center"/>
         <Label x:Name="pesel_label" Content="PESEL number" HorizontalAlignment="Left" Margin="725,371,0,0" VerticalAlignment="Top" Width="276" Height="54" Foreground="Black" FontFamily="Comic Sans MS" FontSize="25" VerticalContentAlignment="Center"/>
         <Label Content="My profile &gt;&gt; Edit profile" HorizontalAlignment="Left" Margin="371,146,0,0" VerticalAlignment="Top" Width="460" Height="61" Foreground="#FF641717" FontFamily="Comic Sans MS" FontSize="32" VerticalContentAlignment="Center" FontWeight="Bold"/>
+        <PasswordBox x:Name="password_box" HorizontalAlignment="Left" Margin="425,473,0,0" VerticalAlignment="Top" Width="276" Height="49" FontFamily="Comic Sans MS" FontSize="25" BorderBrush="#FF641717" TabIndex="21" VerticalContentAlignment="Center"/>
+        <PasswordBox x:Name="confirmPassword_box" HorizontalAlignment="Left" Margin="725,473,0,0" VerticalAlignment="Top" Width="276" Height="49" FontFamily="Comic Sans MS" FontSize="25" BorderBrush="#FF641717" TabIndex="21" VerticalContentAlignment="Center"/>
     </Grid>
 </Window>

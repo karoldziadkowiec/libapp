@@ -28,7 +28,7 @@
                 </TransformGroup>
             </Rectangle.RenderTransform>
         </Rectangle>
-        <TextBox x:Name="name_textbox" HorizontalAlignment="Left" Height="54" Margin="510,187,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="227" VerticalContentAlignment="Center" FontFamily="Comic Sans MS" FontSize="24"/>
+        <TextBox x:Name="name_textbox" HorizontalAlignment="Left" Height="54" Margin="510,187,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="227" VerticalContentAlignment="Center" FontFamily="Comic Sans MS" FontSize="24" BorderBrush="#FF641717" TabIndex="20"/>
         <Label Content="Surname" HorizontalAlignment="Left" Margin="797,125,0,0" VerticalAlignment="Top" Height="59" Width="227" Foreground="#FF641717" FontFamily="Comic Sans MS" FontSize="26" FontWeight="Bold"/>
         <Rectangle HorizontalAlignment="Left" Height="3" Margin="797,179,0,0" Stroke="Black" VerticalAlignment="Top" Width="227" Fill="#FF641717">
             <Rectangle.RenderTransform>
@@ -50,7 +50,7 @@
                 </TransformGroup>
             </Rectangle.RenderTransform>
         </Rectangle>
-        <TextBox x:Name="surname_textbox" HorizontalAlignment="Left" Height="54" Margin="797,187,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="227" VerticalContentAlignment="Center" FontFamily="Comic Sans MS" FontSize="24"/>
+        <TextBox x:Name="surname_textbox" HorizontalAlignment="Left" Height="54" Margin="797,187,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="227" VerticalContentAlignment="Center" FontFamily="Comic Sans MS" FontSize="24" BorderBrush="#FF641717" TabIndex="21"/>
         <Label Content="Name" HorizontalAlignment="Left" Margin="510,125,0,0" VerticalAlignment="Top" Height="59" Width="227" Foreground="#FF641717" FontFamily="Comic Sans MS" FontSize="26" FontWeight="Bold"/>
         <Label Content="PESEL number" HorizontalAlignment="Left" Margin="510,248,0,0" VerticalAlignment="Top" Height="57" Width="227" Foreground="#FF641717" FontFamily="Comic Sans MS" FontSize="26" FontWeight="Bold"/>
         <Rectangle HorizontalAlignment="Left" Height="3" Margin="510,298,0,0" Stroke="Black" VerticalAlignment="Top" Width="227" Fill="#FF641717">
@@ -63,7 +63,7 @@
                 </TransformGroup>
             </Rectangle.RenderTransform>
         </Rectangle>
-        <TextBox x:Name="pesel_textbox" HorizontalAlignment="Left" Height="53" Margin="510,306,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="227" VerticalContentAlignment="Center" FontFamily="Comic Sans MS" FontSize="24"/>
+        <TextBox x:Name="pesel_textbox" HorizontalAlignment="Left" Height="53" Margin="510,306,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="227" VerticalContentAlignment="Center" FontFamily="Comic Sans MS" FontSize="24" BorderBrush="#FF641717" TabIndex="22"/>
         <Label Content="Phone number" HorizontalAlignment="Left" Margin="797,248,0,0" VerticalAlignment="Top" Height="57" Width="227" Foreground="#FF641717" FontFamily="Comic Sans MS" FontSize="26" FontWeight="Bold"/>
         <Rectangle HorizontalAlignment="Left" Height="3" Margin="510,179,0,0" Stroke="Black" VerticalAlignment="Top" Width="227" Fill="#FF641717">
             <Rectangle.RenderTransform>
@@ -85,7 +85,7 @@
                 </TransformGroup>
             </Rectangle.RenderTransform>
         </Rectangle>
-        <TextBox x:Name="phone_textbox" HorizontalAlignment="Left" Height="53" Margin="797,306,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="227" VerticalContentAlignment="Center" FontFamily="Comic Sans MS" FontSize="24"/>
+        <TextBox x:Name="phone_textbox" HorizontalAlignment="Left" Height="53" Margin="797,306,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="227" VerticalContentAlignment="Center" FontFamily="Comic Sans MS" FontSize="24" BorderBrush="#FF641717" TabIndex="23"/>
         <Label Content="E-mail" HorizontalAlignment="Left" Margin="510,362,0,0" VerticalAlignment="Top" Height="51" Width="227" Foreground="#FF641717" FontFamily="Comic Sans MS" FontSize="26" FontWeight="Bold"/>
         <Rectangle HorizontalAlignment="Left" Height="3" Margin="510,410,0,0" Stroke="Black" VerticalAlignment="Top" Width="227" Fill="#FF641717">
             <Rectangle.RenderTransform>
@@ -97,9 +97,9 @@
                 </TransformGroup>
             </Rectangle.RenderTransform>
         </Rectangle>
-        <TextBox x:Name="email_textbox" HorizontalAlignment="Left" Height="54" Margin="510,418,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="227" VerticalContentAlignment="Center" FontFamily="Comic Sans MS" FontSize="24"/>
-        <Button Content="Register" HorizontalAlignment="Left" Margin="797,522,0,0" VerticalAlignment="Top" Height="54" Width="227" Background="#FF641717" Foreground="White" FontFamily="Comic Sans MS" FontSize="32" Click="Button_Click" RenderTransformOrigin="0.493,0.206"/>
-        <Button Content="Close" HorizontalAlignment="Left" Margin="847,587,0,0" VerticalAlignment="Top" Height="54" Width="177" Background="#FF641717" Foreground="White" FontFamily="Comic Sans MS" FontSize="32" Click="Button_Click_1"/>
+        <TextBox x:Name="email_textbox" HorizontalAlignment="Left" Height="54" Margin="510,418,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="227" VerticalContentAlignment="Center" FontFamily="Comic Sans MS" FontSize="24" BorderBrush="#FF641717" TabIndex="24"/>
+        <Button Content="Register" HorizontalAlignment="Left" Margin="797,522,0,0" VerticalAlignment="Top" Height="54" Width="227" Background="#FF641717" Foreground="White" FontFamily="Comic Sans MS" FontSize="32" Click="Button_Click" RenderTransformOrigin="0.493,0.206" TabIndex="28"/>
+        <Button Content="Close" HorizontalAlignment="Left" Margin="847,587,0,0" VerticalAlignment="Top" Height="54" Width="177" Background="#FF641717" Foreground="White" FontFamily="Comic Sans MS" FontSize="32" Click="Button_Click_1" TabIndex="29"/>
         <Label Content="Address" HorizontalAlignment="Left" Margin="797,362,0,0" VerticalAlignment="Top" Height="51" Width="227" Foreground="#FF641717" FontFamily="Comic Sans MS" FontSize="26" FontWeight="Bold"/>
         <Rectangle HorizontalAlignment="Left" Height="3" Margin="797,410,0,0" Stroke="Black" VerticalAlignment="Top" Width="227" Fill="#FF641717">
             <Rectangle.RenderTransform>
@@ -111,7 +111,7 @@
                 </TransformGroup>
             </Rectangle.RenderTransform>
         </Rectangle>
-        <TextBox x:Name="address_textbox" HorizontalAlignment="Left" Height="54" Margin="797,418,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="227" VerticalContentAlignment="Center" FontFamily="Comic Sans MS" FontSize="24"/>
+        <TextBox x:Name="address_textbox" HorizontalAlignment="Left" Height="54" Margin="797,418,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="227" VerticalContentAlignment="Center" FontFamily="Comic Sans MS" FontSize="24" BorderBrush="#FF641717" TabIndex="25"/>
         <Label Content="Birthday" HorizontalAlignment="Left" Margin="510,472,0,0" VerticalAlignment="Top" Height="51" Width="227" Foreground="#FF641717" FontFamily="Comic Sans MS" FontSize="26" FontWeight="Bold"/>
         <Rectangle HorizontalAlignment="Left" Height="3" Margin="510,520,0,0" Stroke="Black" VerticalAlignment="Top" Width="227" Fill="#FF641717">
             <Rectangle.RenderTransform>
@@ -123,7 +123,7 @@
                 </TransformGroup>
             </Rectangle.RenderTransform>
         </Rectangle>
-        <DatePicker x:Name="birthday_datepicker" HorizontalAlignment="Left" Margin="510,533,0,0" VerticalAlignment="Top" Height="42" Width="227" FontFamily="Comic Sans MS" FontSize="24" FirstDayOfWeek="Monday" TabIndex="36"/>
-        <CheckBox x:Name="accept_checkbox" Content="I accept the terms of the library." HorizontalAlignment="Left" Margin="510,587,0,0" VerticalAlignment="Top" Height="32" Width="278" FontFamily="Comic Sans MS" FontSize="15"/>
+        <DatePicker x:Name="birthday_datepicker" HorizontalAlignment="Left" Margin="510,533,0,0" VerticalAlignment="Top" Height="42" Width="227" FontFamily="Comic Sans MS" FontSize="24" FirstDayOfWeek="Monday" TabIndex="26"/>
+        <CheckBox x:Name="accept_checkbox" Content="I accept the terms of the library." HorizontalAlignment="Left" Margin="510,587,0,0" VerticalAlignment="Top" Height="32" Width="278" FontFamily="Comic Sans MS" FontSize="15" TabIndex="27"/>
     </Grid>
 </Window>

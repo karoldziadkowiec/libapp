@@ -31,7 +31,7 @@ namespace libapp
         private void Button_Click(object sender, RoutedEventArgs e)
         {
             string login = login_textbox.Text;
-            string password = password_textbox.Text;
+            string password = password_box.Password;
             string name = name_textbox.Text;
             string surname = surname_textbox.Text;
             string pesel = pesel_textbox.Text;
