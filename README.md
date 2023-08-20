@@ -5,9 +5,9 @@ Technologies used in the project: C#, .NET Framework, WPF, MySQL.
 
 Features of the project: registering, logging in, adding books, browsing the list of books, editing and deleting books, borrowing books by selecting a book and reader, viewing the status of borrowed books, viewing and editing reader data, adding and removing a reader, editing and deleting an admin profile, logging out.
 
-Administratos's side:
 ![Start page](https://github.com/karoldziadkowiec/libapp/blob/master/photos/1.png)
 
+Administratos's side:
 ![Admin - Login page](https://github.com/karoldziadkowiec/libapp/blob/master/photos/2.png)
 
 ![Admin - Register page](https://github.com/karoldziadkowiec/libapp/blob/master/photos/3.png)
