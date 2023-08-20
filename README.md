@@ -4,3 +4,20 @@ The project is a modern window application that acts as an interface for effecti
 Technologies used in the project: C#, .NET, WPF, MySQL.
 
 Features of the project: registering, logging in, editing the profile, deleting the profile, adding a new reader, deleting a reader, viewing and editing a reader's data, borrowing books, viewing the list of books, viewing the status of borrowed books, adding books, logging out.
+
+Administratos's side:
+![Register Page](https://github.com/karoldziadkowiec/libapp/blob/master/photos/1.png)
+
+![Login Page](https://github.com/karoldziadkowiec/libapp/blob/master/photos/1.png)
+
+![Main Page](https://github.com/karoldziadkowiec/libapp/blob/master/photos/1.png)
+
+![My Profile Page](https://github.com/karoldziadkowiec/libapp/blob/master/photos/1.png)
+
+![Services Page](https://github.com/karoldziadkowiec/libapp/blob/master/photos/1.png)
+
+![Create Visit Page](https://github.com/karoldziadkowiec/libapp/blob/master/photos/1.png)
+
+![My visits Page](https://github.com/karoldziadkowiec/libapp/blob/master/photos/1.png)
+
+![Edit Profile Page](https://github.com/karoldziadkowiec/libapp/blob/master/photos/1.png)
