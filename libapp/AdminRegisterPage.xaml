@@ -7,7 +7,14 @@
         mc:Ignorable="d"
         Title="libapp" Height="700" Width="1100" Icon="/icon.png" WindowStartupLocation="CenterScreen" ResizeMode="CanMinimize" Background="White">
     <Grid>
-        <Rectangle HorizontalAlignment="Left" Height="684" Stroke="Black" VerticalAlignment="Center" Width="433" Fill="#FF641717"/>
+        <Rectangle HorizontalAlignment="Left" Height="684" Stroke="Black" VerticalAlignment="Center" Width="433">
+            <Rectangle.Fill>
+                <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                    <GradientStop Color="Black"/>
+                    <GradientStop Color="#FF641717" Offset="1"/>
+                </LinearGradientBrush>
+            </Rectangle.Fill>
+        </Rectangle>
         <Label Content="libapp" HorizontalAlignment="Left" Margin="62,52,0,0" VerticalAlignment="Top" Height="172" Width="344" FontFamily="Harlow Solid Italic" FontSize="120" Foreground="White"/>
         <Image HorizontalAlignment="Left" Height="296" Margin="66,224,0,0" VerticalAlignment="Top" Width="301" Source="/login.png"/>
         <Label Content="Register Page" HorizontalAlignment="Left" Margin="607,44,0,0" VerticalAlignment="Top" Height="79" Width="362" Foreground="#FF641717" FontFamily="Comic Sans MS" FontSize="48" FontWeight="Bold"/>
@@ -80,7 +87,7 @@
             </Rectangle.RenderTransform>
         </Rectangle>
         <TextBox x:Name="surname_textbox" HorizontalAlignment="Left" Height="53" Margin="797,366,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="227" VerticalContentAlignment="Center" FontFamily="Comic Sans MS" FontSize="24"/>
-        <Label Content="PESEL number" HorizontalAlignment="Left" Margin="510,424,0,0" VerticalAlignment="Top" Height="59" Width="227" Foreground="#FF641717" FontFamily="Comic Sans MS" FontSize="32" FontWeight="Bold"/>
+        <Label Content="PESEL number" HorizontalAlignment="Left" Margin="510,424,0,0" VerticalAlignment="Top" Height="59" Width="244" Foreground="#FF641717" FontFamily="Comic Sans MS" FontSize="32" FontWeight="Bold"/>
         <Rectangle HorizontalAlignment="Left" Height="3" Margin="510,483,0,0" Stroke="Black" VerticalAlignment="Top" Width="227" Fill="#FF641717">
             <Rectangle.RenderTransform>
                 <TransformGroup>

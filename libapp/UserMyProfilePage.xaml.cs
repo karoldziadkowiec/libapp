@@ -1,5 +1,8 @@
-﻿using System;
+﻿using MySql.Data.MySqlClient;
+using Org.BouncyCastle.Bcpg;
+using System;
 using System.Collections.Generic;
+using System.Data;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -24,6 +27,14 @@ namespace libapp
         {
             InitializeComponent();
             us = user;
+
+            name_label.Content = us.name;
+            surname_label.Content = us.surname;
+            pesel_label.Content = us.pesel;
+            phone_label.Content = us.phone;
+            email_label.Content = us.email;
+            birthday_label.Content = us.birthday;
+            address_label.Content = us.address;
         }
 
         private void Button_Click_2(object sender, RoutedEventArgs e)

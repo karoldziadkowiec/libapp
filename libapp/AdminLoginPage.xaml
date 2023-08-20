@@ -8,7 +8,14 @@
         Title="libapp" Height="700" Width="1100" Icon="/icon.png" WindowStartupLocation="CenterScreen" ResizeMode="CanMinimize">
 
     <Grid>
-        <Rectangle HorizontalAlignment="Left" Height="684" Stroke="#FF641717" VerticalAlignment="Center" Width="433" Fill="#FF641717"/>
+        <Rectangle HorizontalAlignment="Left" Height="684" Stroke="#FF641717" VerticalAlignment="Center" Width="433">
+            <Rectangle.Fill>
+                <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                    <GradientStop Color="Black"/>
+                    <GradientStop Color="#FF641717" Offset="1"/>
+                </LinearGradientBrush>
+            </Rectangle.Fill>
+        </Rectangle>
         <Label Content="Login Page" HorizontalAlignment="Left" Margin="645,44,0,0" VerticalAlignment="Top" Height="79" Width="261" Foreground="#FF641717" FontFamily="Comic Sans MS" FontSize="48" FontWeight="Bold"/>
         <Label Content="Login" HorizontalAlignment="Left" Margin="578,162,0,0" VerticalAlignment="Top" Height="62" Width="131" Foreground="#FF641717" FontFamily="Comic Sans MS" FontSize="32" FontWeight="Bold"/>
         <Label Content="Password" HorizontalAlignment="Left" Margin="578,313,0,0" VerticalAlignment="Top" Height="62" Width="173" Foreground="#FF641717" FontFamily="Comic Sans MS" FontSize="32" FontWeight="Bold"/>

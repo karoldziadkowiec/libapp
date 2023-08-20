@@ -7,9 +7,16 @@
         mc:Ignorable="d"
         Title="libapp" Height="700" Width="1100" Icon="/icon.png" WindowStartupLocation="CenterScreen" ResizeMode="CanMinimize">
     <Grid Background="White">
-        <Rectangle HorizontalAlignment="Left" Height="700" Stroke="Black" VerticalAlignment="Center" Width="550" Fill="#FF641717"/>
+        <Rectangle HorizontalAlignment="Left" Height="700" Stroke="Black" VerticalAlignment="Center" Width="550">
+            <Rectangle.Fill>
+                <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                    <GradientStop Color="Black"/>
+                    <GradientStop Color="#FF641717" Offset="1"/>
+                </LinearGradientBrush>
+            </Rectangle.Fill>
+        </Rectangle>
         <Label Content="app" HorizontalAlignment="Left" Height="176" Margin="542
-               ,61,0,0" VerticalAlignment="Top" Width="265" FontSize="120" FontFamily="Harlow Solid Italic" Foreground="#FF641717"/>
+               ,61,0,0" VerticalAlignment="Top" Width="265" FontSize="120" FontFamily="Harlow Solid Italic" Foreground="#FF531414"/>
         <Label Content="lib" HorizontalAlignment="Left" Height="176" Margin="297,61,0,0" VerticalAlignment="Top" Width="253" FontSize="120" FontFamily="Harlow Solid Italic" Foreground="White" HorizontalContentAlignment="Right"/>
         <Button Content="Reader panel" HorizontalAlignment="Left" Height="155" Margin="153,381,0,0" VerticalAlignment="Top" Width="244" FontFamily="Comic Sans MS" FontSize="36" Click="Button_Click" Foreground="White" BorderBrush="White">
             <Button.Background>

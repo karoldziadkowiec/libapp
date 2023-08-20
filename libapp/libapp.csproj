@@ -173,6 +173,9 @@
     <Compile Include="UserMyProfilePage.xaml.cs">
       <DependentUpon>UserMyProfilePage.xaml</DependentUpon>
     </Compile>
+    <Compile Include="UserRegisterPage.xaml.cs">
+      <DependentUpon>UserRegisterPage.xaml</DependentUpon>
+    </Compile>
     <Compile Include="UserReturnDeadlinesPage.xaml.cs">
       <DependentUpon>UserReturnDeadlinesPage.xaml</DependentUpon>
     </Compile>
@@ -269,6 +272,10 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="UserMyProfilePage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="UserRegisterPage.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

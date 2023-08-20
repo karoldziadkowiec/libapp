@@ -90,5 +90,11 @@ namespace libapp
             }
         }
 
+        private void Button_Click_2(object sender, RoutedEventArgs e)
+        {
+            UserRegisterPage userregisterpage = new UserRegisterPage();
+            userregisterpage.Show();
+            this.Hide();
+        }
     }
 }
