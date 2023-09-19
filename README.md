@@ -1,7 +1,7 @@
 # libapp
 The project is a modern window application with an interface for effective library management. This project perfectly illustrates how modern IT technologies can significantly improve processes related to customer service. The application was designed to simplify the work of the librarian in the library by borrowing books in the system and access to information about books and readers. Thanks to the graphical interface, the application is easy to use, which increases the efficiency of the librarian's work. The application has two main forms of use: from the side of the administrator (i.e. the librarian) and from the side of the reader.
 
-Technologies used in the project: C#, .NET Framework, WPF, MySQL.
+Technologies used in the project: C#, .NET Framework (WPF), XAML, MySQL.
 
 Features of the project: registering, logging in, adding books, browsing the list of books, editing and deleting books, borrowing books by selecting a book and reader, viewing the status of borrowed books, viewing and editing reader data, adding and removing a reader, editing and deleting an admin profile, logging out.
 
