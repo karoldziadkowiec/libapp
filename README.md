@@ -4,6 +4,7 @@ The project is a modern window application with an interface for effective libra
 Technologies used in the project: 
 - **.NET Framework (WPF)**
 - **C#**
+- **ADO.NET**
 - **MySQL**
 - **XAML**
 
